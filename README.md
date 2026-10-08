@@ -30,6 +30,10 @@ python scripts/frame.py pack examples/acs-version-b.run.json
 
 To start a new product, use the init command in the [runbook](router/RUNBOOK.md). The exported packet has a 450-word cap for hot context; additional evidence remains accessible by exact source link. A word cap is for handoffs, **not** a limit on careful investigation.
 
+## Proposed human-in-the-loop experience design
+
+- **[PEF intent-aware experience router proposal](design/PEF_HUMAN_IN_LOOP_EXPERIENCE_ROUTER.md)** — source-driven discovery; targeted owner QA only for consequential ambiguity; buyer-belief, task UX and service blueprints; approved low-fi direction and gated handoff to ABA; independent review. **Design only, not yet implemented.**
+
 ## ACS A → B is planned, not underway
 
 | Artifact | Meaning |
