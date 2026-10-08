@@ -8,8 +8,9 @@ This repository is the **working lab for product understanding, marketing framin
 2. [EPISTEMIC_STATE.md](EPISTEMIC_STATE.md): authoritative status labels, case facts, open questions, rejected approaches.
 3. [FRAMEWORK.md](FRAMEWORK.md): stage gates and agent roles.
 4. [QA_GATES.md](QA_GATES.md): mandatory truth, narrative and rendered quality checks.
-5. When working on ACS, read [CASE_STUDY_ACS.md](CASE_STUDY_ACS.md) and [STORYBOARD_ACS.md](STORYBOARD_ACS.md).
-6. For a different product, start with [templates/FRAME_BRIEF.md](templates/FRAME_BRIEF.md).
+5. [RESEARCH_UX_PRODUCT_DESIGN.md](RESEARCH_UX_PRODUCT_DESIGN.md): grounded method comparisons and the **proposed**, not yet adopted, UX/product-design extension.
+6. When working on ACS, read [CASE_STUDY_ACS.md](CASE_STUDY_ACS.md) and [STORYBOARD_ACS.md](STORYBOARD_ACS.md).
+7. For a different product, start with [templates/FRAME_BRIEF.md](templates/FRAME_BRIEF.md).
 
 ## First responsibility
 
