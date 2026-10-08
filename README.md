@@ -14,6 +14,8 @@ The question this repository exists to answer: **How do we make the hard creativ
 
 | File | Purpose |
 | --- | --- |
+| [prompts/AGENT_ROUTER.md](prompts/AGENT_ROUTER.md) | Copy-ready multi-agent dispatch, handoffs and failure routing |
+| [tests/REJECTION_FIXTURES.md](tests/REJECTION_FIXTURES.md) | Ten adversarial regression cases drawn from the failure taxonomy |
 | [EPISTEMIC_STATE.md](EPISTEMIC_STATE.md) | What is observed, inferred, unresolved, or explicitly rejected; ongoing decision log |
 | [CASE_STUDY_ACS.md](CASE_STUDY_ACS.md) | Forensic analysis of the failed framing iterations and corrections |
 | [FRAMEWORK.md](FRAMEWORK.md) | Stage-by-stage operating method, agent routing, deliverable contracts |
