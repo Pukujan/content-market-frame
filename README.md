@@ -1,54 +1,71 @@
 # Content Market Frame
 
-**Working lab for turning real product behavior into a human-recognizable story, a credible market promise, and a visual sales narrative.** This is not a finished standard or an autonomous marketing agent. It is a reviewable method we can improve from real failures.
+**A reusable, context-efficient router for turning what a repository really does into a human-recognizable problem, credible market position, visual story, and honest product experience.**
 
-## Why this exists
+This repository exists because a technically competent agent can still sell the wrong problem. Our ACS case required repeated corrections—from a fabricated coordination vignette to PCM-only continuity to a research-heavy audit-page voice—before the real human-centered sales direction emerged. **The valuable artifact is the decision process, not merely the generated site.**
 
-A product can be technically well understood and still be described to customers incorrectly. Agents can read every file, research dozens of papers, and build a beautiful site while choosing the wrong protagonist, the wrong problem, and the wrong reason to care.
+**Status:** v0.1 implementation of the router and structural validation, **not** a proven cross-repository standard. The current ACS site is a substantial but not final positive baseline according to its owner. No Version B site has been generated or authorized by this repo.
 
-Our initial case is the Agent Custom Setup (ACS) site rewrite, where the narrative moved from narrowly framed agent coordination, through an overcorrection into continuity, through audit-style evidence dumping, toward a broader proposition: one install takes the repeated mechanical overhead of long-running projects off the human's desk. That proposition is a **working interpretation, not an owner-approved claim**.
+## Start with the router
 
-The question this repository exists to answer: **How do we make the hard creative judgments reproducible without pretending they can all be reduced to deterministic text checks?**
-
-## Start here
-
-| File | Purpose |
+| Resource | Use |
 | --- | --- |
-| [prompts/AGENT_ROUTER.md](prompts/AGENT_ROUTER.md) | Copy-ready multi-agent dispatch, handoffs and failure routing |
-| [tests/REJECTION_FIXTURES.md](tests/REJECTION_FIXTURES.md) | Ten adversarial regression cases drawn from the failure taxonomy |
-| [EPISTEMIC_STATE.md](EPISTEMIC_STATE.md) | What is observed, inferred, unresolved, or explicitly rejected; ongoing decision log |
-| [CASE_STUDY_ACS.md](CASE_STUDY_ACS.md) | Forensic analysis of the failed framing iterations and corrections |
-| [RESEARCH_UX_PRODUCT_DESIGN.md](RESEARCH_UX_PRODUCT_DESIGN.md) | External primary-source comparison of established UX/product methods; proposed dual-track buyer/user model |
-| [FRAMEWORK.md](FRAMEWORK.md) | Stage-by-stage operating method, agent routing, deliverable contracts |
-| [QA_GATES.md](QA_GATES.md) | Semantic quality gates, falsification tests, claim review, rendered and media review |
-| [STORYBOARD_ACS.md](STORYBOARD_ACS.md) | Concrete, provisional sales-story example for the four-layer ACS pack |
-| [templates/FRAME_BRIEF.md](templates/FRAME_BRIEF.md) | Fill-in input and product truth brief for the next repository |
-| [templates/REVIEW_RECORD.md](templates/REVIEW_RECORD.md) | Review record designed to preserve criticism, decisions, and revisions |
+| **[Router runbook](router/RUNBOOK.md)** | Exact reusable sequence and CLI commands; begin here |
+| **[Machine router](router/router.v1.json)** | Stages, roles, gate conditions, context policy, failure-to-stage routing |
+| **[Run schema](router/run.schema.json)** | Typed facts, decisions, approvals, rejected patterns, scene and claim records |
+| **[Context protocol](router/CONTEXT_PROTOCOL.md)** | What to retain at each agent handoff instead of replaying long transcripts |
+| **[Router CLI](scripts/frame.py)** | Create/validate runs, make bounded packets, invalidate stale decisions |
+| **[Agent operating contract](AGENTS.md)** | Instructions another agent can load first |
+| **[Automated checks](.github/workflows/frame-validation.yml)** | JSON Schema, standard-library CLI, tests and sample packet checks |
 
-## Core rule
+## Try the workflow without generating anything
 
-**The source repository tells us what the product can do. Human research tells us what someone experiences. Strategy chooses which problem to lead with. A storyboard earns attention. Evidence constrains the promise. The generator implements approved decisions. None of those steps are interchangeable.**
+Run locally with Python 3.12 or another supported Python 3 release:
 
-The product is not the documentation. The evidence ledger is not the landing page. A grammatical sentence is not necessarily a human insight. A mechanically passing website is not necessarily a good sales story.
+~~~bash
+python -m unittest discover -s tests -p 'test_*.py' -v
+python scripts/frame.py validate examples/acs-version-b.run.json
+python scripts/frame.py pack examples/acs-version-b.run.json
+~~~
 
-## Relationship to the existing stack
+To start a new product, use the init command in the [runbook](router/RUNBOOK.md). The exported packet has a 450-word cap for hot context; additional evidence remains accessible by exact source link. A word cap is for handoffs, **not** a limit on careful investigation.
 
-This is a **pre-generation framing and acceptance layer** meant to complement, not fork or replace, [Content Generation Modules (CGM)](https://github.com/Pukujan/content-generation-modules). CGM already owns brand/context, writing routes, visual direction, generation and HTML-demo contracts. This lab adds explicit product-truth reconciliation, market-story selection, storyboard review, semantic adversarial QA, and reusable failure memory. A future integration should feed approved artifacts into CGM and keep its existing authorities intact.
+## ACS A → B is planned, not underway
 
-## Status and boundaries
+| Artifact | Meaning |
+| --- | --- |
+| [Current ACS website](https://acs.design-bakery.com/) | Baseline A — owner-favored direction, still improvable; immutable capture pending |
+| [ACS Version B plan](plans/ACS_VERSION_B_PLAN.md) | Ordered approach: stabilize router → capture A → choose B story → storyboard → only then generate separate B → compare |
+| [ACS-B run JSON](examples/acs-version-b.run.json) | DRAFT source-linked record; no approvals, baseline not yet captured |
+| [Future comparison template](templates/AB_COMPARISON.md) | Evaluation criteria and factual capture manifest; no invented results |
 
-- **Status:** v0 research-backed working draft; not an accepted universal framework.
-- **Source handling:** The original conversation archive is private. This public repository contains only sanitized synthesis and publicly inspectable product facts. Do not paste private logs, credentials, machine paths, unpublished claims or private screenshots.
-- **Claims:** Market data and alleged product outcomes are not verified by this repository. Avoid implied savings, adoption, customer proof, or efficacy until the specific evidence is checked.
-- **Human authority:** Owner sign-off on positioning, factual promises, and visual direction is separate from passing tests.
+**Do not change or redeploy Baseline A because a planning document exists.** Do not call an untested B approach an experiment that already happened.
 
-## First operating loop
+## Research, creative records and acceptance
 
-1. Fill the frame brief from source and real audience evidence.
-2. Reconcile product scope and flag contradictions.
-3. Write three competing narrative spines, then deliberately select one.
-4. Approve a scene-by-scene storyboard before any webpage, image, or video generation.
-5. Route implementation through the existing CGM/app-generation machinery.
-6. Run the QA gates including a skeptical first-time-reader review, inspect pixels and media, and record what failed in the epistemic state.
+| Resource | Use |
+| --- | --- |
+| [Epistemic state](EPISTEMIC_STATE.md) | Living observed/inferred/proposed/unknown/rejected/accepted claims and decisions |
+| [ACS forensic case](CASE_STUDY_ACS.md) | Why the failed stories failed and how to route corrections upstream |
+| [Framework](FRAMEWORK.md) | In-depth market-story creative stages, producer/editor roles |
+| [QA gates](QA_GATES.md) | Semantic, source/claim, image/video and real-interaction checks |
+| [Provisional ACS storyboard](STORYBOARD_ACS.md) | Worked buyer-belief example, not accepted marketing copy |
+| [UX/product-design research](RESEARCH_UX_PRODUCT_DESIGN.md) | Established frameworks and proposed separate buyer-belief versus user-task track |
+| [Negative fixtures](tests/REJECTION_FIXTURES.md) | Old failure classes as tests rather than a pile of banned words |
+| [Agent router prompt](prompts/AGENT_ROUTER.md) | Detailed handoff instructions to complement the machine route |
+| [Intake and review templates](templates/FRAME_BRIEF.md), [review record](templates/REVIEW_RECORD.md) | Human decision forms without inventing evidence |
 
-Do not judge repeatability by how many assets the pipeline generates. Judge it by whether a new agent can derive a **correct, appealing, intelligible story** with dramatically fewer owner corrections.
+## Relationship to CGM
+
+[Content Generation Modules](https://github.com/Pukujan/content-generation-modules) still owns content context, brand foundation, writing routes, visual direction, image generation, demos and file naming. **This router sits in front of CGM** to decide which product story deserves implementation, what actual source evidence constrains it, and how an independent reviewer can reject semantic failures. It does not duplicate CGM's modules, change release pins, or grant editorial acceptance.
+
+## Important boundaries
+
+- The source conversation is private; only sanitized lessons and public repository facts belong here.
+- Owner insight is direction, not fabricated user-research data or a measured product effect.
+- Written specs, functioning demo, deployed page and user-approved copy are separate states.
+- Never infer a completed real install from a no-write preview.
+- Machine checks validate structural consistency, not buyer desire, UX quality, or true artistic direction.
+- If the buyer/problem/product subject changes, downstream story, media and claims become stale. Preserve why they failed.
+
+**Operating rule:** Investigate truth → interpret human need → compare positions → choose the story → plan visuals and UX → send an *approved* brief to CGM → independently inspect actual behavior and editorial meaning. Revisit the earliest faulty premise when QA fails.
