@@ -1,0 +1,532 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Pukujan/content-market-frame/blob/main/router/run.schema.json",
+  "title": "Content Market Frame run record",
+  "description": "Portable context-lean snapshot for one product-to-market framing iteration; source links and reviewer decisions rather than raw chats.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "project",
+    "objective",
+    "active_stage",
+    "gates",
+    "facts",
+    "decisions",
+    "rejections",
+    "scenes",
+    "claims",
+    "handoff",
+    "history"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cmf.run.v1"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[a-zA-Z0-9._-]+$"
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "repo",
+        "source_ref",
+        "visibility",
+        "product_subject"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 2
+        },
+        "repo": {
+          "type": "string",
+          "format": "uri"
+        },
+        "source_ref": {
+          "type": "string",
+          "minLength": 3
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "private",
+            "mixed"
+          ]
+        },
+        "product_subject": {
+          "type": "string",
+          "minLength": 5
+        }
+      }
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 8
+    },
+    "active_stage": {
+      "enum": [
+        "S0_intake",
+        "S1_truth",
+        "S2_human",
+        "S3_position",
+        "S4_story",
+        "S5_creative_handoff",
+        "S6_qa"
+      ]
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "S0_intake",
+        "S1_truth",
+        "S2_human",
+        "S3_position",
+        "S4_story",
+        "S5_creative_handoff",
+        "S6_qa"
+      ],
+      "properties": {
+        "S0_intake": {
+          "$ref": "#/$defs/gate"
+        },
+        "S1_truth": {
+          "$ref": "#/$defs/gate"
+        },
+        "S2_human": {
+          "$ref": "#/$defs/gate"
+        },
+        "S3_position": {
+          "$ref": "#/$defs/gate"
+        },
+        "S4_story": {
+          "$ref": "#/$defs/gate"
+        },
+        "S5_creative_handoff": {
+          "$ref": "#/$defs/gate"
+        },
+        "S6_qa": {
+          "$ref": "#/$defs/gate"
+        }
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/fact"
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/decision"
+      }
+    },
+    "rejections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/rejection"
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/scene"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "handoff": {
+      "$ref": "#/$defs/handoff"
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "baseline_url": {
+          "type": "string"
+        },
+        "baseline_snapshot_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "candidate_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "baseline_verification": {
+          "enum": [
+            "not_captured",
+            "captured_not_verified",
+            "verified"
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reason"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "draft",
+            "review",
+            "accepted",
+            "rejected",
+            "stale"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "approved_by": {
+          "type": "string"
+        },
+        "approval_ref": {
+          "type": "string"
+        },
+        "artifact_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "statement",
+        "status",
+        "source_refs",
+        "visibility"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^F[0-9]+$"
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 5
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "owner_direction",
+            "inferred",
+            "proposed",
+            "unknown",
+            "disputed",
+            "rejected"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_revision": {
+          "type": "string"
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "private",
+            "sanitized"
+          ]
+        },
+        "boundary": {
+          "type": "string"
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "status",
+        "statement",
+        "reason",
+        "fact_ids"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^D[0-9]+$"
+        },
+        "kind": {
+          "enum": [
+            "product_scope",
+            "audience",
+            "human_job",
+            "positioning",
+            "promise",
+            "story",
+            "visual",
+            "ux_task",
+            "cta",
+            "proof"
+          ]
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "accepted",
+            "rejected",
+            "superseded",
+            "stale"
+          ]
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 5
+        },
+        "reason": {
+          "type": "string"
+        },
+        "fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reviewed_by": {
+          "type": "string"
+        },
+        "approval_ref": {
+          "type": "string"
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "rejection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "failure_class",
+        "why",
+        "affected_decision_ids"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^R[0-9]+$"
+        },
+        "failure_class": {
+          "type": "string"
+        },
+        "why": {
+          "type": "string"
+        },
+        "affected_decision_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "question",
+        "belief_change",
+        "visual_job",
+        "depends_on_decisions",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^SC[0-9]+$"
+        },
+        "question": {
+          "type": "string"
+        },
+        "belief_change": {
+          "type": "string"
+        },
+        "visual_job": {
+          "type": "string"
+        },
+        "depends_on_decisions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "media_contract": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "review",
+            "accepted",
+            "rejected",
+            "stale"
+          ]
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "wording",
+        "claim_type",
+        "source_refs",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^C[0-9]+$"
+        },
+        "wording": {
+          "type": "string"
+        },
+        "claim_type": {
+          "enum": [
+            "mechanism",
+            "observed_outcome",
+            "third_party_context",
+            "illustration",
+            "judgment"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "unverified",
+            "disputed",
+            "rejected"
+          ]
+        },
+        "limitations": {
+          "type": "string"
+        }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary",
+        "fact_ids",
+        "decision_ids",
+        "open_questions",
+        "next_action"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "decision_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "next_action": {
+          "type": "string"
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "at",
+        "action",
+        "detail"
+      ],
+      "properties": {
+        "at": {
+          "type": "string"
+        },
+        "action": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "ref": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
