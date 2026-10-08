@@ -1,0 +1,41 @@
+name: Check framing router
+on:
+  push:
+    paths:
+      - 'router/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'examples/**'
+      - '.github/workflows/frame-validation.yml'
+  pull_request:
+    paths:
+      - 'router/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'examples/**'
+      - '.github/workflows/frame-validation.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-router:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Python router and tests
+        run: python -m compileall -q scripts tests
+      - name: Run router regression tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Verify JSON document syntax
+        run: |
+          python -m json.tool router/router.v1.json > /dev/null
+          python -m json.tool router/run.schema.json > /dev/null
+          python -m json.tool examples/acs-version-b.run.json > /dev/null
+      - name: Validate draft ACS-B run record
+        run: python scripts/frame.py validate examples/acs-version-b.run.json
+      - name: Ensure context packet is bounded
+        run: python scripts/frame.py pack examples/acs-version-b.run.json > /tmp/frame-packet.json
