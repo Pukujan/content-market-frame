@@ -123,6 +123,20 @@
 
 ---
 
+## HTML implementation ownership — 2026-10-08
+
+**OWNER DIRECTION / candidate decision:** The owner favors independent review and refinement of narrowly focused CGM modules, and identified CGM's `html-demo` module as a likely removal candidate because a separate app-building automation repository already owns interface construction.
+
+**OBSERVED:** CGM's `html-demo` is a brief semantic HTML/responsive/screenshot checklist, not a full builder. A dedicated, privately accessible app-building repository owns fuller frontend generation and validation. The genuine overlap is **implementation ownership and agent routing**, not a prohibition on semantic HTML in React. The builder is still developing; do not claim all intended features are implemented.
+
+**OBSERVED DEPENDENCY:** `html-demo` is declared in CGM's module registry, enforced by its validator/test fixtures, and present in downstream pinned CGM installation metadata. Removing only the Markdown skill would introduce compatibility problems.
+
+**PROPOSED, NOT APPROVED:** Make the dedicated app-building system the sole frontend implementation authority. Route the new framing module's approved product/market/UX specification into it, and migrate any unique accessibility/viewport/screenshot criteria into a narrow experience acceptance contract without duplicating functionality. Retire `html-demo` in a coordinated versioned change after a consumer/pin audit. See the [public-safe source review and migration proposal](audits/CGM_HTML_DEMO_OWNERSHIP_2026-10-08.md).
+
+**NOT DONE / UNKNOWN:** No `html-demo` deletion, CGM release change, consumer migration, or frontend replacement was performed. Exact set of all adopters is not enumerated. Causal contribution of `html-demo` to the earlier poor ACS page is unproven.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
