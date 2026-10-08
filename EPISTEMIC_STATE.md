@@ -137,6 +137,20 @@
 
 ---
 
+## Human-in-the-loop intent and ABA route — 2026-10-08
+
+**OWNER PROPOSAL / DIRECTION:** Use established UX, product, market and service-design practices in a repeatable staged route. Extract intent from project repo and prior decisions, but accept that purpose, audience and commercial framing may be inherently ambiguous. An independent agent reviewer should identify genuine gaps, prepare **small targeted QA questions** for the owner (a compact form only when multiple independent essentials justify one), then carry accepted decisions through story/UX drafting and full interface implementation by ABA.
+
+**PROPOSED automation boundary:** Automate scoped source analysis, opportunity and actor hypotheses, alternative positions, buyer-belief and user-task journeys, touchpoint/service blueprint, drafts, evidence/consistency checks, and implementation once authorized. Do **not** automate owner intent selection, treat synthetic customer interpretations as observed research, silently accept substantive design reinterpretations, or infer editorial/publish approval from green code/runner gates.
+
+**IMPLEMENTED HERE (documentation only):** [PEF selective-QA route proposal](design/PEF_HUMAN_IN_LOOP_EXPERIENCE_ROUTER.md), including ambiguity record contract, example user question packets, experience brief for ABA, challenge/revision routing and approval boundaries. **NOT IMPLEMENTED:** CGM PEF module, form generator, automatic ABA handoff, blueprint parity verifier, site generation, or a tested end-to-end process.
+
+**KNOWN INTEGRATION RISK:** A builder's own blueprint/build transitions do not establish that the user approved product/market/experience intent. The adapter must preserve independently reviewed decisions and prevent silent reinterpretation; verify exact private implementation capabilities before designating this complete.
+
+**OPEN:** Confirm minimum owner review cadence, whether user-task UX is activated for all interactive marketing demos or only for product design tasks, and the acceptance boundary between approved low-fidelity brief, ABA build, and release.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
