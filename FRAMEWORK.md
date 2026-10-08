@@ -3,6 +3,8 @@
 **Version:** 0.1 (experimental)  
 **Objective:** make *creative framing decisions* inspectable and reusable. This runbook is upstream of copywriting, website generation and asset generation. It does not replace CGM, and it does not authorize automatic publication.
 
+> **Research boundary:** This document describes a market-story framing workflow, not a full UX or product-design lifecycle. See [UX and product-design research](RESEARCH_UX_PRODUCT_DESIGN.md) for the proposed buyer-belief and user-task tracks, service-blueprint integration and additional evaluation gates. These additions remain unapproved proposals.
+
 ## The problem with a conventional multi-agent pipeline
 
 “Research → write → generate images → build → run checks” starts too late. A perfectly completed sequence can carry a wrong assumption all the way through: the wrong customer, an over-narrow understanding of the product, false causal evidence, an invented vignette, and a beautiful site that sells the wrong benefit.
