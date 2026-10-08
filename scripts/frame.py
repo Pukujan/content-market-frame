@@ -177,6 +177,8 @@ def validate_run(run: dict) -> list[str]:
     for ref in h["decision_ids"]:
         if ref not in ids["decisions"]:
             errors.append(f"Handoff references missing decision {ref}")
+    if STAGES.index(run["active_stage"]) >= STAGES.index("S3_position") and "UNPINNED" in project.get("source_ref", "").upper():
+        errors.append("Freeze a concrete source revision before S3_position")
     for stage in STAGES[:STAGES.index(run["active_stage"])]:
         if gates[stage]["status"] != "accepted":
             errors.append(f"Cannot be at {run['active_stage']}: previous gate {stage} not accepted")
