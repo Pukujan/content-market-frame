@@ -109,6 +109,20 @@
 
 ---
 
+## Owner repository-successor philosophy — 2026-10-08
+
+**OWNER DIRECTION / established working preference:** When a helper repo accretes stale beliefs, instructions and context overhead, the owner often prefers **creating a successor repository and selectively carrying over only its best, still-useful parts**, rather than repeatedly refactoring the entire older repository. The clean boundary helps agents start with a focused task and current assumptions, without replaying thousands of hours of prior deliberation.
+
+**OWNER DIRECTION / continuity requirement:** The successor must preserve continuity **in the repository itself** through concise epistemic messages left by prior agents: what is actually known, which claims are inferred or disputed, why prior approaches failed, what decisions were accepted, which source references validate them, and the specific next task. This continuity must not depend on loading a complete predecessor transcript or rediscovering the whole history.
+
+**PROPOSED successor protocol, pending design acceptance:** (1) freeze predecessor at a pinned revision as read-only historical evidence; (2) inventory contracts and actual consumers; (3) classify features as *port, redesign, reference only, or discard* with reasons; (4) carry over only verified, currently relevant rules and concise counterexamples; (5) create a one-page epistemic handoff and scoped agent routes in the fresh repo; (6) validate using unlike tasks; (7) cut over dependent repos deliberately where required. This is a suggested technique, not an obligation to preserve CGM's implementation.
+
+**CORRECTION TO EARLIER RECOMMENDATION:** Do **not** frame continued CGM maintenance or permanent compatibility as the desired endpoint. Compatibility is a **transitional constraint** only where active adopters would otherwise break. A clean successor and retirement of obsolete architecture are legitimate preferred outcomes; no CGM deletion, dependency cutover, or replacement has yet been authorized.
+
+**UNVERIFIED HYPOTHESIS:** A clean successor with compressed epistemic context will improve agent effectiveness and reduce context-bloat-related failure. Plausible based on experience, but improvement should be evaluated on later uses rather than asserted as measured fact.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
