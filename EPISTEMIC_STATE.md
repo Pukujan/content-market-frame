@@ -93,6 +93,22 @@
 
 ---
 
+## CGM capability and architecture audit — 2026-10-08
+
+**OBSERVED:** The current [CGM snapshot](https://github.com/Pukujan/content-generation-modules/tree/37ba626ea3064bde89352f00e99c659e85609c5b) declares version 0.5.12 (status draft), eight module entry points, adapters and version pins, provenance/asset/README schemas, writing routes and Python checks. See the [full source-pinned audit](audits/CGM_CAPABILITY_ARCHITECTURE_AUDIT_2026-10-08.md).
+
+**OBSERVED ARCHITECTURAL RISK:** AGENTS/README/product guidance references roughly 96 KB of core required helper reading before target documents, source research and generated assets. CGM has overlapping mandates and global output rules. This is evidence of *possible context exposure*, **not proof of exact runtime input or sole cause**.
+
+**DOCUMENTED PROBLEMS (author reports, not independently reproduced here):** CGM issues #44/#50/#51 (wrong purpose/surface and audit leakage), #64/#66 (marketing page could satisfy skill loading/checklist and still fail human comprehension), #60 (technical word false positive), and #62 (stack workflow drift). Marketing-intro PR #65 remains open/unmerged in the inspected state; do not count it as current 0.5.12 functionality.
+
+**INFERRED:** The ACS trouble likely combined excessive/duplicated context, content-surface misrouting, implicit buyer/problem discovery, compliance-style output gates and premature implementation. Exact causal proportions unknown.
+
+**PROPOSED, NOT APPROVED:** Retain CGM's evidence and temporal status model, narrow writing help, visual/asset provenance, naming utility, versioning and structural tests; migrate strategy and experience decisions to a purpose-aware human/market/UX/service router; keep existing CGM adopters compatible until the replacement is proven.
+
+**UNKNOWN:** Actual tokens loaded in the failed run, complete list of CGM adopters/pins, efficacy of replacement on unlike repos, or owner acceptance of eventual deprecation. **No CGM deletion or adopter migration authorized or performed.**
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
