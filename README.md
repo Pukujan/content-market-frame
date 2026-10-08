@@ -44,6 +44,7 @@ To start a new product, use the init command in the [runbook](router/RUNBOOK.md)
 ## Architecture audits and preserve-or-replace decisions
 
 - **[CGM capability & architecture audit (2026-10-08)](audits/CGM_CAPABILITY_ARCHITECTURE_AUDIT_2026-10-08.md)** — complete eight-module inventory, supporting implementation, version/adapter/validator contracts, source-backed failure modes, measured instruction footprint, keep/split/retire map and open migration decisions.
+- **[CGM HTML-demo ownership review (2026-10-08)](audits/CGM_HTML_DEMO_OWNERSHIP_2026-10-08.md)** — identifies the dedicated app builder as preferred frontend implementation authority, distinguishes semantic HTML principles from generator ownership, and proposes a safe versioned module retirement.
 - **Current decision:** audit only. CGM remains untouched and no existing consumer has been migrated or disconnected. A new router is not yet proven to replace CGM across adopters.
 
 ## Research, creative records and acceptance
