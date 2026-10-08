@@ -2,7 +2,15 @@
 
 This repository is the **working lab for product understanding, marketing framing, storyboard direction and semantic QA**, not a general app builder or a place to paste conversation dumps.
 
-## Read order
+## Read order (context-efficient; do not load everything)
+
+1. [README.md](README.md): purpose, the runnable router, and boundary between this repo and CGM.
+2. [router/router.v1.json](router/router.v1.json): load the active stage's instructions and named dependencies, not an entire brainstorm archive.
+3. [router/CONTEXT_PROTOCOL.md](router/CONTEXT_PROTOCOL.md) and [router/RUNBOOK.md](router/RUNBOOK.md): handoff packet budget, stage transitions, privacy and invalidations.
+4. The relevant run record, for ACS-B [examples/acs-version-b.run.json](examples/acs-version-b.run.json). It remains DRAFT and does **not** authorize generation.
+5. If source/market/creative review requires deeper material, use the specific targeted references below—not every file upfront.
+
+### Additional source references
 
 1. [README.md](README.md): purpose and relationship to the existing stack.
 2. [EPISTEMIC_STATE.md](EPISTEMIC_STATE.md): authoritative status labels, case facts, open questions, rejected approaches.
@@ -14,7 +22,7 @@ This repository is the **working lab for product understanding, marketing framin
 
 ## First responsibility
 
-Before generating a landing page, copy, image, film, README, UI or app:
+Before generating a landing page, copy, image, film, README, UI or app, **require accepted positioning and storyboard gates**. Do not infer approval from this chat, drafts, mechanical tests, or a prior successful design. Before any such work:
 - Distinguish the **named repository's ownership** from the **bundle/product being marketed**.
 - Verify current product contract and known boundaries; do not treat promotional copy as the highest authority.
 - Write the human actor, problem, workaround, stakes, proposed change and credible mechanism.
@@ -24,6 +32,14 @@ Before generating a landing page, copy, image, film, README, UI or app:
 - Compose with CGM instead of copying CGM's content/visual/image mechanisms into this repo.
 
 **Wrong scope or false proof stops generation.** More web research or a nicer image is not a remedy for a mistaken market promise.
+
+## Routing rule
+
+Use the seven stages in [router/router.v1.json](router/router.v1.json) and the bounded output of the CLI handoff packet. The machine route determines which stage receives a failure. A wrong value proposition goes back to product truth/human job/positioning, **not** to the video model or CSS. Maintain source links and explicit status labels.
+
+Product UX and interaction-task storyboarding are an optional linked track when the task concerns actual task completion, navigation, onboarding, or error recovery; they are not automatically activated by a marketing-page request.
+
+The owner explicitly requested a **router first, a subsequent ACS B story plan second, and only later a controlled A/B comparison**. Do not build, deploy, alter the A site, generate new A/B visuals, or claim an experiment completed while the plan is still DRAFT. See [plans/ACS_VERSION_B_PLAN.md](plans/ACS_VERSION_B_PLAN.md).
 
 ## Conversation-to-decision procedure
 
