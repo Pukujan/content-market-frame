@@ -35,6 +35,10 @@ jobs:
           python -m json.tool router/router.v1.json > /dev/null
           python -m json.tool router/run.schema.json > /dev/null
           python -m json.tool examples/acs-version-b.run.json > /dev/null
+      - name: Validate run against JSON Schema
+        run: |
+          python -m pip install 'jsonschema>=4.20,<5'
+          python -c "import json; from jsonschema import Draft202012Validator; s=json.load(open('router/run.schema.json')); x=json.load(open('examples/acs-version-b.run.json')); Draft202012Validator.check_schema(s); Draft202012Validator(s).validate(x); print('Schema PASS')"
       - name: Validate draft ACS-B run record
         run: python scripts/frame.py validate examples/acs-version-b.run.json
       - name: Ensure context packet is bounded
