@@ -127,7 +127,7 @@ A shared user/need/intent ledger links the **buyer-belief story** to the **actua
 
 The dedicated builder owns frontend execution. Treat PEF as **compiled input**, not a competing HTML generator.
 
-**Critical observed ownership implication:** The currently documented ABA runner describes an internal *plan → blueprint → build* process where its unattended runner can auto-approve its generated blueprint from supplied answers. That runner-level auto-approval is a tooling convenience, **not** owner approval of the human problem, market strategy, UX plan or finished page.
+**Approval boundary:** Treat any builder-internal plan or blueprint transition as an execution step, **not** as verified owner approval of the human problem, market strategy, UX plan or finished page. Whether the currently pinned ABA runner can directly consume an externally accepted blueprint remains an integration question to check against the private implementation contract before integration.
 
 **Proposed handoff contract:**
 1. Router creates approved `Experience Brief` and evidence/decision manifest.
