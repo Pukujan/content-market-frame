@@ -1,0 +1,158 @@
+{
+  "schema_version": "cmf.run.v1",
+  "run_id": "acs-version-b-framing-001",
+  "project": {
+    "id": "acs-site-b",
+    "repo": "https://github.com/Pukujan/agent-custom-setup",
+    "source_ref": "UNPINNED: main; freeze source SHA before production",
+    "visibility": "public",
+    "product_subject": "Integrated Agent Custom Setup installation (ACS + PCM + OIO + CGM)"
+  },
+  "objective": "Plan a stronger human-centered Version B site while preserving the owner-favored Version A as an untouched baseline",
+  "active_stage": "S0_intake",
+  "gates": {
+    "S0_intake": {
+      "status": "draft",
+      "reason": "Not yet reviewed for Version B"
+    },
+    "S1_truth": {
+      "status": "draft",
+      "reason": "Not yet reviewed for Version B"
+    },
+    "S2_human": {
+      "status": "draft",
+      "reason": "Not yet reviewed for Version B"
+    },
+    "S3_position": {
+      "status": "draft",
+      "reason": "Not yet reviewed for Version B"
+    },
+    "S4_story": {
+      "status": "draft",
+      "reason": "Not yet reviewed for Version B"
+    },
+    "S5_creative_handoff": {
+      "status": "draft",
+      "reason": "Not yet reviewed for Version B"
+    },
+    "S6_qa": {
+      "status": "draft",
+      "reason": "Not yet reviewed for Version B"
+    }
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "ACS project contract assigns execution coordination to ACS, continuity to PCM, issue recording to OIO, and writing/visual direction to CGM.",
+      "status": "observed",
+      "source_refs": [
+        "https://github.com/Pukujan/agent-custom-setup/blob/main/PROJECT.md"
+      ],
+      "source_revision": "main; freeze commit for B",
+      "visibility": "public",
+      "boundary": "Component ownership is not equivalent to validated adopter outcome."
+    },
+    {
+      "id": "F2",
+      "statement": "Current public hotload spec describes full PCM, CGM, OIO and ACS runtime with PARTIAL on incomplete required installation.",
+      "status": "observed",
+      "source_refs": [
+        "https://github.com/Pukujan/agent-custom-setup/blob/main/modules/coordination/multi-agent-hotload/v0.1.0/HOTLOAD.md",
+        "https://github.com/Pukujan/agent-custom-setup/blob/main/modules/coordination/multi-agent-hotload/v0.1.0/SPEC.md"
+      ],
+      "source_revision": "main; freeze before B",
+      "visibility": "public",
+      "boundary": "Requires actual source check and safe run on a target before claiming a supported installation outcome."
+    },
+    {
+      "id": "F3",
+      "statement": "Owner considers the current ACS site substantially better than early versions but not final; preserve it as Baseline A.",
+      "status": "owner_direction",
+      "source_refs": [
+        "https://github.com/Pukujan/content-market-frame/blob/main/EPISTEMIC_STATE.md"
+      ],
+      "visibility": "sanitized",
+      "boundary": "Owner qualitative assessment, not independent UX evidence or completed baseline capture."
+    },
+    {
+      "id": "F4",
+      "statement": "Owner wants the reusable framing router built and stabilized before initiating another site-generation experiment.",
+      "status": "owner_direction",
+      "source_refs": [
+        "https://github.com/Pukujan/content-market-frame/blob/main/README.md"
+      ],
+      "visibility": "sanitized",
+      "boundary": "Working direction in current conversation, not approval to generate/deploy Version B."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "kind": "product_scope",
+      "status": "proposed",
+      "statement": "Market the integrated working surface, respecting the narrower ownership boundaries of each module.",
+      "reason": "Avoid coordination-only or continuity-only collapse.",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ]
+    },
+    {
+      "id": "D2",
+      "kind": "story",
+      "status": "proposed",
+      "statement": "Keep current live ACS website as untouched Baseline A until a recorded capture and owner-reviewed Version B brief exist.",
+      "reason": "Make comparison fair and avoid repeating expensive rework.",
+      "fact_ids": [
+        "F3",
+        "F4"
+      ]
+    }
+  ],
+  "rejections": [
+    {
+      "id": "R1",
+      "failure_class": "premature_generation",
+      "why": "Do not generate a Version B website before the framing workflow and the creative direction have been reviewed.",
+      "affected_decision_ids": [
+        "D2"
+      ],
+      "evidence_ref": "https://github.com/Pukujan/content-market-frame/blob/main/CASE_STUDY_ACS.md"
+    }
+  ],
+  "scenes": [],
+  "claims": [],
+  "handoff": {
+    "summary": "No Version B generation is authorized. First stabilize and exercise the router's structural rules, capture Version A as a fixed reference, and compare competing B market angles on paper before locking a B storyboard.",
+    "fact_ids": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+    ],
+    "decision_ids": [
+      "D1",
+      "D2"
+    ],
+    "open_questions": [
+      "Who is the first buyer/user scenario we will prioritize for B?",
+      "What current live A capture is available, and can its visible assets and behavior be frozen?",
+      "Which parts of A will be protected as accepted direction vs opened to revision?"
+    ],
+    "next_action": "Review router contract and A-to-B plan; no site build or deployment."
+  },
+  "history": [
+    {
+      "at": "2026-10-08",
+      "action": "draft_created",
+      "detail": "Version B framing record initialized as draft; no approval or experiment has occurred."
+    }
+  ],
+  "comparison": {
+    "baseline_url": "https://acs.design-bakery.com/",
+    "baseline_snapshot_ref": null,
+    "candidate_ref": null,
+    "baseline_verification": "not_captured",
+    "note": "A is the live owner-favored reference, not a measured or permanently approved gold standard. Do not compare to an unpinned moving page."
+  }
+}
