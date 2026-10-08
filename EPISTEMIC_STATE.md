@@ -37,6 +37,26 @@
 | E17 | Whether one install measurably saves time or reduces errors is unproven here. | UNKNOWN | Do not turn external studies into an ACS effect size. |
 | E18 | The best buyer persona, purchase trigger, adoption friction, pricing, and CTA are not validated. | UNKNOWN | Do not pretend “developer teams” is yet a measured segment. |
 
+## Owner assessment of the live-site direction — 2026-10-08
+
+**OWNER DIRECTION / qualitative judgment:** The owner supplied `https://acs.design-bakery.com/` as the current example and judged this version a **substantial step forward compared with the early agent-produced directions, while explicitly saying it could be stronger and is not final**. Preserve both halves of this statement. It is a *provisional positive exemplar*, not gold-standard acceptance, not proof that the present page is optimal, and not permission to freeze its exact copy/design as a reusable template.
+
+**OBSERVATION LIMIT:** This assessment records the owner's current judgment. An attempted independent live-site retrieval on 2026-10-08 was not possible through the available web/network tools; the current DOM, pixels, interactions, and page contents were therefore **not independently inspected** for this update. Historical reports from the case must not be represented as current verification.
+
+**PROPOSED QUALITY LADDER:**
+1. **Misframed:** wrong human pain/product scope, even if technically polished.
+2. **Directionally correct:** right central human problem, basic commercial arc, materially better than rejected drafts. **Owner currently places the ACS direction here or above, without final sign-off.**
+3. **Persuasive and coherent:** first-time buyers can state who it is for, why they should care, how the product changes their work, and what the CTA really does; visuals support that exact story.
+4. **Validated exemplar:** real target-audience evaluation plus claim, visual, behavior and explicit editorial acceptance, with reproducible source artifacts.
+
+**What to retain from the case:** human protagonist; integrated-pack scope; attention back to real work; research subordinate to the sales promise; honesty without an audit-report front page; story-driven image/video roles; visible previews that cannot masquerade as actual writes.
+
+**Improvement hypotheses, not observed faults of the current live page:** sharpen the audience/trigger, make the emotional contrast more immediate, test different hero promise/subhead pairs, simplify explanation of four integrated mechanisms, strengthen the progression of visuals and video, and test whether the CTA matches buyer readiness. None of these may be recorded as live-site defects until inspected or supported by reader feedback.
+
+**Next experiment:** present the current page (or screenshots/captured page) to target readers cold. Ask what they think it solves, how it works, whether they want the next step and what the button will do. Compare their interpretation against owner intent *before* iterating on colors, animation or generic copy polish. Preserve current version as a baseline.
+
+---
+    
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
@@ -94,3 +114,4 @@ Every new decision adds a small dated record: **observation → interpretation �
 | Date | Event | Status |
 | --- | --- | --- |
 | 2026-10-08 | Initial forensic synthesis and product-doc reconciliation created in the public lab. | OBSERVED / PROPOSED mix, not approved |
+| 2026-10-08 | Owner assessed live-site direction as a substantial improvement but explicitly not final; baseline is a provisional positive exemplar. Independent live inspection unavailable. | OWNER DIRECTION; page QA UNKNOWN |
