@@ -18,6 +18,7 @@ The question this repository exists to answer: **How do we make the hard creativ
 | [tests/REJECTION_FIXTURES.md](tests/REJECTION_FIXTURES.md) | Ten adversarial regression cases drawn from the failure taxonomy |
 | [EPISTEMIC_STATE.md](EPISTEMIC_STATE.md) | What is observed, inferred, unresolved, or explicitly rejected; ongoing decision log |
 | [CASE_STUDY_ACS.md](CASE_STUDY_ACS.md) | Forensic analysis of the failed framing iterations and corrections |
+| [RESEARCH_UX_PRODUCT_DESIGN.md](RESEARCH_UX_PRODUCT_DESIGN.md) | External primary-source comparison of established UX/product methods; proposed dual-track buyer/user model |
 | [FRAMEWORK.md](FRAMEWORK.md) | Stage-by-stage operating method, agent routing, deliverable contracts |
 | [QA_GATES.md](QA_GATES.md) | Semantic quality gates, falsification tests, claim review, rendered and media review |
 | [STORYBOARD_ACS.md](STORYBOARD_ACS.md) | Concrete, provisional sales-story example for the four-layer ACS pack |
