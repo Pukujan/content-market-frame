@@ -41,6 +41,11 @@ To start a new product, use the init command in the [runbook](router/RUNBOOK.md)
 
 **Do not change or redeploy Baseline A because a planning document exists.** Do not call an untested B approach an experiment that already happened.
 
+## Architecture audits and preserve-or-replace decisions
+
+- **[CGM capability & architecture audit (2026-10-08)](audits/CGM_CAPABILITY_ARCHITECTURE_AUDIT_2026-10-08.md)** — complete eight-module inventory, supporting implementation, version/adapter/validator contracts, source-backed failure modes, measured instruction footprint, keep/split/retire map and open migration decisions.
+- **Current decision:** audit only. CGM remains untouched and no existing consumer has been migrated or disconnected. A new router is not yet proven to replace CGM across adopters.
+
 ## Research, creative records and acceptance
 
 | Resource | Use |
