@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "router_version": "0.1.0",
+  "name": "Content-to-Market Frame Router",
+  "intent": "Derive a source-faithful, human-recognizable product/market story before sending approved direction to CGM or a builder",
+  "states": [
+    "draft",
+    "review",
+    "accepted",
+    "rejected",
+    "stale"
+  ],
+  "status_model": {
+    "accepted": "Explicit editor/owner decision required; neither model confidence nor build checks grant acceptance",
+    "stale": "Must re-review because upstream assumptions changed",
+    "rejected": "Must preserve the failure reason and invalidate dependent artifacts"
+  },
+  "stage_order": [
+    "S0_intake",
+    "S1_truth",
+    "S2_human",
+    "S3_position",
+    "S4_story",
+    "S5_creative_handoff",
+    "S6_qa"
+  ],
+  "stages": [
+    {
+      "id": "S0_intake",
+      "agent": "scoper",
+      "question": "What is being sold, to whom, and with which evidence/privacy boundaries?",
+      "required_inputs": [
+        "target_repo",
+        "requested_medium",
+        "source_visibility"
+      ],
+      "outputs": [
+        "scope",
+        "source_index",
+        "unknowns"
+      ],
+      "gate": "Source/repo and public-private separation recorded; no assumptions promoted to facts",
+      "next": "S1_truth"
+    },
+    {
+      "id": "S1_truth",
+      "agent": "product_truth",
+      "question": "What does this repo own, what does the integrated product do, and what is only specified?",
+      "required_inputs": [
+        "source_index"
+      ],
+      "outputs": [
+        "capability_map",
+        "limits",
+        "disputes",
+        "claim_refs"
+      ],
+      "gate": "Product identity and central promise substantiated to their claimed status; disputed capabilities block stronger copy",
+      "next": "S2_human"
+    },
+    {
+      "id": "S2_human",
+      "agent": "human_interpreter",
+      "question": "Which person is trying to make what progress, and what repeatedly gets in their way?",
+      "required_inputs": [
+        "capability_map",
+        "owner_direction"
+      ],
+      "outputs": [
+        "actors",
+        "job",
+        "trigger",
+        "workaround",
+        "stakes",
+        "evidence_gaps"
+      ],
+      "gate": "A concrete human situation is stated without jargon, with external-user evidence distinguished from hypothesis",
+      "next": "S3_position"
+    },
+    {
+      "id": "S3_position",
+      "agent": "positioning_director",
+      "question": "Which of at least three plausible but different market positions best connects true capabilities to meaningful progress?",
+      "required_inputs": [
+        "job",
+        "capability_map",
+        "limits",
+        "competitor_alternatives"
+      ],
+      "outputs": [
+        "three_positions",
+        "objections",
+        "recommended_position",
+        "why_not_others"
+      ],
+      "gate": "Owner explicitly selects or rejects a positioning angle; no single-module collapse or first-party ROI extrapolation",
+      "next": "S4_story"
+    },
+    {
+      "id": "S4_story",
+      "agent": "narrative_director",
+      "question": "In what order should buyer beliefs change and what should the visual story accomplish?",
+      "required_inputs": [
+        "approved_position",
+        "claim_refs"
+      ],
+      "outputs": [
+        "story_spine",
+        "belief_scene_cards",
+        "proof_placement",
+        "cta_behavior"
+      ],
+      "gate": "Human editor approves problem/promise/scene logic; no fabricated customer case; story advances instead of reporting process",
+      "next": "S5_creative_handoff"
+    },
+    {
+      "id": "S5_creative_handoff",
+      "agent": "visual_and_content_director",
+      "question": "What exact creative constraints must CGM and any app builder implement?",
+      "required_inputs": [
+        "approved_story",
+        "approved_claims",
+        "target_CGM_router"
+      ],
+      "outputs": [
+        "cgm_route",
+        "locked_copy",
+        "art_shot_list",
+        "motion_contract",
+        "responsive_notes",
+        "no_write_contract"
+      ],
+      "gate": "Scenes/claims/assets link to accepted decisions; CGM owns writing/image/HTML implementation, not market-position selection",
+      "next": "S6_qa"
+    },
+    {
+      "id": "S6_qa",
+      "agent": "independent_reviewer",
+      "question": "Would a skeptical human recognize the correct value and would all displayed/interactive promises be true?",
+      "required_inputs": [
+        "implemented_preview",
+        "accepted_decision_refs"
+      ],
+      "outputs": [
+        "semantic_review",
+        "claims_review",
+        "pixels_video_review",
+        "behavior_review",
+        "editorial_verdict"
+      ],
+      "gate": "Truth and behavior must pass; editorial acceptance recorded separately from implementation/test success",
+      "next": "release_or_revise"
+    }
+  ],
+  "parallelism": {
+    "allowed": "Independent product evidence and buyer/market research can occur concurrently after S0; merge under S1/S2 before S3",
+    "forbidden": "Website/image/video build before accepted S3+S4 decisions; concurrent writers mutating accepted source-of-truth records"
+  },
+  "routing_on_failure": {
+    "wrong_product_scope": "S1_truth",
+    "wrong_buyer_or_job": "S2_human",
+    "weak_or_wrong_commercial_angle": "S3_position",
+    "audit_log_voice_or_disconnected_story": "S4_story",
+    "stale_asset_or_wrong_image_role": "S5_creative_handoff",
+    "untrue_demo_or_CTA": "S1_truth",
+    "bad_task_ux": "ux_task_track",
+    "unsupported_statistic": "S1_truth",
+    "passed_build_but_user_confused": "S2_human"
+  },
+  "side_track": {
+    "id": "ux_task_track",
+    "when": "The requested work includes changing product interaction, onboarding, navigation, task completion or recovery states",
+    "outputs": [
+      "user_journey",
+      "task_flow",
+      "state_model",
+      "service_blueprint",
+      "usability_criteria"
+    ],
+    "rule": "Separate from marketing belief scenes; trace every interaction claim to observable system behavior; owner chooses when to activate"
+  },
+  "context_policy": {
+    "max_handoff_words": 450,
+    "max_decision_summary_words": 150,
+    "default_source_mode": "IDs plus canonical links, selective snippets; never full transcript/codebase dump",
+    "reuse_rule": "Carry forward accepted conclusions, supporting evidence links, rejected reasons and open questions; re-open source only when decision/evidence invalidates",
+    "invalidations": "A changed buyer, product scope, promise or CTA marks dependent scenes and media stale",
+    "private_to_public": "Summarize safely; never transfer private transcripts, credentials, internal filesystem paths or screenshots"
+  },
+  "approval_policy": {
+    "gate_requires_explicit_human": [
+      "S3_position",
+      "S4_story",
+      "S6_qa"
+    ],
+    "assistant_may": "investigate, hypothesize, propose, flag contradictions, create drafts",
+    "assistant_must_not": "treat confidence as approval, fabricate customer outcomes, claim a preview is a real install, silently expand product scope"
+  },
+  "integration": {
+    "upstream": [
+      "target repository's normative contract",
+      "target repo owner direction",
+      "CGM adapters and version pins"
+    ],
+    "downstream": [
+      "CGM brand-foundation",
+      "CGM content-context",
+      "CGM writing-direction/HSW",
+      "CGM visual-direction",
+      "CGM image-generation",
+      "CGM html-demo",
+      "CGM human-output-naming",
+      "app builder only after creative lock"
+    ],
+    "ownership": "This router owns pre-generation judgment/handoff and semantic critique, not CGM module implementations or release pinning"
+  }
+}
