@@ -57,6 +57,20 @@
 
 ---
     
+## UX and product-design research — 2026-10-08
+
+**OBSERVED IN EXTERNAL PRIMARY SOURCES:** Our approach overlaps known practices: the Design Council's Double Diamond; IDEO human-centered design; Christensen's Jobs to Be Done; Strategyzer's Value Proposition Canvas; Teresa Torres's Opportunity Solution Tree; NN/g UX storyboarding, journey mapping, service blueprinting and usability testing; SVPG's four risks (value, usability, feasibility and viability). See [research and exact citations](RESEARCH_UX_PRODUCT_DESIGN.md).
+
+**INFERRED GAP IN CURRENT LAB:** We cover the commercial belief journey much more fully than the actual product user journey. Missing first-class artifacts include buyer-vs-operator distinctions, observed user research, navigation/IA, interaction/task flows, error and PARTIAL/READY recovery states, service blueprint, task usability, and accessibility-based acceptance. The existing ten-scene ACS storyboard is **a marketing storyboard**, not an adequate substitute for a UX task storyboard.
+
+**PROPOSED:** Two interdependent design tracks: (A) buyer belief/market story and (B) actual user task/product experience, both from shared product truth, human-needs research and customer/job evidence. Reconcile both with a service blueprint that traces visible promises to real backstage behavior. UX research begins early and iterates; it is not just a polishing phase “later.”
+
+**UNKNOWN:** Whether the combined agent-managed method yields higher buyer comprehension, better usability, or faster accepted designs than a simpler workflow. Whether the live ACS demo/front page satisfies any particular usability gate remains untested in this research. No actual buyer interviews or usability tests were conducted.
+
+**OPEN DECISION:** Approve a UX/product-design extension as a distinct branch of the framework, or keep the lab narrowly focused on marketing framing and link to external UX practice? Until owner approval, keep new U0–U6 checks as proposed, not mandatory certified gates.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
