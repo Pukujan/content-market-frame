@@ -71,6 +71,28 @@
 
 ---
 
+## Workflow decision — router before another ACS version (2026-10-08)
+
+**OWNER DIRECTION:** The owner considers the previous ACS effort costly in time and cognitive/context expenditure. The priority now is to build a **repeatable context-conscious router/schema/workflow in this separate repository**, then plan a new ACS Version B website through that workflow and finally compare a fixed Baseline A with B. **Do not treat the request as permission to start another website experiment yet.**
+
+**OBSERVED IN THIS REPOSITORY:** A seven-stage machine-readable [router](router/router.v1.json), typed [run schema](router/run.schema.json), [context protocol](router/CONTEXT_PROTOCOL.md), standard-library [CLI](scripts/frame.py), structural [tests](tests/test_frame.py), draft [ACS-B run](examples/acs-version-b.run.json) and [plan](plans/ACS_VERSION_B_PLAN.md) now exist. These are scaffolding and controls, not evidence that an unrelated repository has yet succeeded with the method.
+
+**PROPOSED operating architecture:** This repo is a pre-CGM judgment/acceptance router. CGM remains the source-owned engine for writing, image/video visual direction, naming and HTML demos. Public source and owner direction are compressed into cited decision packets (450-word default budget). Correction invalidates downstream assumptions/scenes rather than only rewriting surface copy.
+
+**PROPOSED evaluation ordering:**
+1. Make schema, routing and context policy mechanically stable;
+2. Preserve a versioned reference for the present ACS site without changing it;
+3. Use three explicit human/market positioning alternatives before selecting B;
+4. Approve B belief storyboard and optional UX task map;
+5. Then authorize and generate B separately;
+6. Compare at fixed revisions on predeclared human-understanding, persuasion, truth, visual-story and CTA/UX criteria.
+
+**UNKNOWN:** Whether this router actually reduces future corrections or makes superior marketing. Current Version A has no frozen independent capture in this repo; Version B has not been generated; there is no A/B result to cite. Any statement of demonstrated repeatability would be premature.
+
+**DO-NOT-DO-YET:** No redesign/asset generation/deployment for ACS B; no silently rewriting CGM modules; no publication of raw private transcript content; no assumption that a structurally accepted gate equals editorial acceptance.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
@@ -129,3 +151,4 @@ Every new decision adds a small dated record: **observation → interpretation �
 | --- | --- | --- |
 | 2026-10-08 | Initial forensic synthesis and product-doc reconciliation created in the public lab. | OBSERVED / PROPOSED mix, not approved |
 | 2026-10-08 | Owner assessed live-site direction as a substantial improvement but explicitly not final; baseline is a provisional positive exemplar. Independent live inspection unavailable. | OWNER DIRECTION; page QA UNKNOWN |
+| 2026-10-08 | Owner prioritized router/context preservation before any new ACS-B build. New repo gained machine route, draft run, CLI, tests and future A/B plan; no site regenerated. | OWNER DIRECTION and implemented scaffolding, impact UNKNOWN |
