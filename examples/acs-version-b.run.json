@@ -175,8 +175,8 @@
       "id": "D4",
       "kind": "positioning",
       "status": "proposed",
-      "statement": "Working B concept: Build with agents. Stop managing every handoff. Describe integrated repo-level working rules with explicit limitations and no ROI/time-saving statistics.",
-      "reason": "Working exact headline and full commercial position are still proposed; approved D6 selects the qualitative attention-to-work benefit direction only, without accepting this wording or claims.",
+      "statement": "Proposed product-identifying hero for Version B visual study: 'A shared way of working for AI agents in your repository.' Explain integrated ACS pack and the approved attention-to-work benefit. Exact wording and position remain unapproved.",
+      "reason": "Product-first visual candidate on ABA PR #64. Earlier 'Build with agents. Stop managing every handoff' remains a rejected-as-primary-hero candidate because it delayed product identification; neither exact copy is owner accepted.",
       "fact_ids": [
         "F1",
         "F2",
@@ -393,7 +393,7 @@
     }
   ],
   "handoff": {
-    "summary": "ACS B is a product-introduction website for the individual builder. Lead benefit: return attention to real project work. Hero must identify ACS immediately. Full sourced decisions, claims and scenes remain in run; no creative acceptance.",
+    "summary": "Owner accepted D3 individual builder, D6 attention-to-project-work benefit, and D7 immediate product-introduction objective. ABA PR #64 holds an isolated visual study, not approved ABA build. Q3 primary action, exact copy and creative gates remain open.",
     "fact_ids": [
       "F1",
       "F8"
@@ -407,7 +407,7 @@
       "Q3: What must the primary website action do when clicked? No action approved.",
       "Exact headline and storyboard need independent owner signoff."
     ],
-    "next_action": "Clarify Q3; then review B creative brief. Do not generate B or alter A."
+    "next_action": "Review visual study in ABA PR #64; resolve Q3 click purpose and separate creative approval before any builder/deployment."
   },
   "history": [
     {
@@ -447,6 +447,12 @@
       "at": "2026-10-08",
       "action": "context_packet_refined",
       "detail": "Hot handoff references only product ownership F1, site objective F8 and accepted owner choices D3/D6/D7. Full source/decision/scene history remains in the archival run. Unapproved CTA stays explicit open Q3."
+    },
+    {
+      "at": "2026-10-08",
+      "action": "visual_candidate_created_no_final_approval",
+      "detail": "After owner's go-ahead to explore the product-first market page, an isolated static visual and information-architecture study was created in ABA issue #63 / draft PR #64. This is NOT the model-generated ABA production app nor approved copy/CTA. PEF Q3, S3-S5 and final acceptance remain unresolved. Three pinned source links are evidentiary navigation, not a selected conversion CTA.",
+      "ref": "https://github.com/Pukujan/app-builder-automation/pull/64"
     }
   ],
   "comparison": {
