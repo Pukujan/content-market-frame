@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "router_version": "0.1.0",
+  "router_version": "0.2.0-draft",
   "name": "Content-to-Market Frame Router",
-  "intent": "Derive a source-faithful, human-recognizable product/market story before sending approved direction to CGM or a builder",
+  "intent": "Discover product and human intent, ask targeted owner QA for consequential ambiguities, define buyer and task/service experiences, and compile a source-locked brief for a specialized builder.",
   "states": [
     "draft",
     "review",
@@ -72,7 +72,8 @@
         "trigger",
         "workaround",
         "stakes",
-        "evidence_gaps"
+        "evidence_gaps",
+        "evidence-linked_ambiguities"
       ],
       "gate": "A concrete human situation is stated without jargon, with external-user evidence distinguished from hypothesis",
       "next": "S3_position"
@@ -85,7 +86,8 @@
         "job",
         "capability_map",
         "limits",
-        "competitor_alternatives"
+        "competitor_alternatives",
+        "resolved_or_declared_owner_qa"
       ],
       "outputs": [
         "three_positions",
@@ -93,7 +95,7 @@
         "recommended_position",
         "why_not_others"
       ],
-      "gate": "Owner explicitly selects or rejects a positioning angle; no single-module collapse or first-party ROI extrapolation",
+      "gate": "Actual owner selects a positioning strategy, with claim-safe alternatives and unresolved uncertainty recorded; answered QA is not automatically approval.",
       "next": "S4_story"
     },
     {
@@ -108,29 +110,34 @@
         "story_spine",
         "belief_scene_cards",
         "proof_placement",
-        "cta_behavior"
+        "cta_behavior",
+        "ux_task_flow_if_interactive",
+        "service_blueprint_if_operations"
       ],
       "gate": "Human editor approves problem/promise/scene logic; no fabricated customer case; story advances instead of reporting process",
       "next": "S5_creative_handoff"
     },
     {
       "id": "S5_creative_handoff",
-      "agent": "visual_and_content_director",
-      "question": "What exact creative constraints must CGM and any app builder implement?",
+      "agent": "experience_brief_compiler",
+      "question": "Do approved intent, positioning, buyer story, user tasks, service behavior, media roles, source-verified CTA and acceptance checks form a faithful production contract?",
       "required_inputs": [
-        "approved_story",
-        "approved_claims",
-        "target_CGM_router"
+        "pinned_product_source",
+        "approved_position_and_story",
+        "owner_qa_record",
+        "accepted_scenes_and_verified_claims",
+        "experience_brief"
       ],
       "outputs": [
-        "cgm_route",
+        "pef_experience_brief",
+        "aba_input_spec",
         "locked_copy",
         "art_shot_list",
-        "motion_contract",
-        "responsive_notes",
+        "ux_states",
+        "service_trace",
         "no_write_contract"
       ],
-      "gate": "Scenes/claims/assets link to accepted decisions; CGM owns writing/image/HTML implementation, not market-position selection",
+      "gate": "Owner accepts the exact creative/experience contract. No ABA build if meaningful owner QA is unresolved or source/CTA/claim checks fail.",
       "next": "S6_qa"
     },
     {
@@ -177,7 +184,7 @@
       "service_blueprint",
       "usability_criteria"
     ],
-    "rule": "Separate from marketing belief scenes; trace every interaction claim to observable system behavior; owner chooses when to activate"
+    "rule": "For an interactive product or demo, include task flows, states, safety/error recovery and service trace before build. A static explanatory page may have no tasks. Buyer-belief and product-task storyboards must remain distinct."
   },
   "context_policy": {
     "max_handoff_words": 450,
@@ -191,27 +198,35 @@
     "gate_requires_explicit_human": [
       "S3_position",
       "S4_story",
+      "S5_creative_handoff",
       "S6_qa"
     ],
     "assistant_may": "investigate, hypothesize, propose, flag contradictions, create drafts",
-    "assistant_must_not": "treat confidence as approval, fabricate customer outcomes, claim a preview is a real install, silently expand product scope"
+    "assistant_must_not": "Infer human approval from QA answers or agent confidence; treat owner intentions as observed user research; claim a preview installs software; silently expand scope; publish or mutate production as a consequence of compiling a spec."
   },
   "integration": {
     "upstream": [
       "target repository's normative contract",
       "target repo owner direction",
-      "CGM adapters and version pins"
+      "CGM adapters and version pins",
+      "scoped observed user research and owner QA with source refs"
     ],
     "downstream": [
-      "CGM brand-foundation",
-      "CGM content-context",
-      "CGM writing-direction/HSW",
-      "CGM visual-direction",
-      "CGM image-generation",
-      "CGM html-demo",
-      "CGM human-output-naming",
-      "app builder only after creative lock"
+      "CGM brand/content context (where still relevant)",
+      "CGM writing/visual/image adapters after approved story",
+      "compiled ABA spec: app builder sole frontend implementation authority",
+      "independent product/UX/media/claim review"
     ],
-    "ownership": "This router owns pre-generation judgment/handoff and semantic critique, not CGM module implementations or release pinning"
+    "ownership": "PEF routes discovery/strategy/experience and compiles accepted builder input; ABA owns frontend code, framework, preview and repairs. No CGM HTML-demo implementation route."
+  },
+  "conditional_owner_qa": {
+    "questions_schema": "router/pef-questions.schema.json",
+    "experience_schema": "router/pef-experience.schema.json",
+    "implementation": "scripts/pef.py",
+    "question_policy": "Ask only when facts cannot settle a consequential tradeoff; present agent recommendation, actual source refs, 2–4 alternatives including correction, impact and consequence.",
+    "packet_max_questions": 3,
+    "critical_uncertainty": "Blocking until answered; recorded answers must not silently accept product/positioning decisions.",
+    "low_impact": "Continue automatically with appropriately labeled hypotheses; review with final rendered artifact.",
+    "no_forms_by_default": "Conversational single question preferred. Bundle only multiple essential independent decisions."
   }
 }
