@@ -271,6 +271,15 @@
         },
         "boundary": {
           "type": "string"
+        },
+        "evidence_domain": {
+          "enum": [
+            "product_mechanism",
+            "customer_research",
+            "owner_direction",
+            "external_context",
+            "other"
+          ]
         }
       }
     },
