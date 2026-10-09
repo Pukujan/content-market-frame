@@ -50,7 +50,8 @@
       ],
       "source_revision": "main; freeze commit for B",
       "visibility": "public",
-      "boundary": "Component ownership is not equivalent to validated adopter outcome."
+      "boundary": "Component ownership is not equivalent to validated adopter outcome.",
+      "evidence_domain": "product_mechanism"
     },
     {
       "id": "F2",
@@ -62,7 +63,8 @@
       ],
       "source_revision": "main; freeze before B",
       "visibility": "public",
-      "boundary": "Requires actual source check and safe run on a target before claiming a supported installation outcome."
+      "boundary": "Requires actual source check and safe run on a target before claiming a supported installation outcome.",
+      "evidence_domain": "product_mechanism"
     },
     {
       "id": "F3",
@@ -72,7 +74,8 @@
         "https://github.com/Pukujan/content-market-frame/blob/main/EPISTEMIC_STATE.md"
       ],
       "visibility": "sanitized",
-      "boundary": "Owner qualitative assessment, not independent UX evidence or completed baseline capture."
+      "boundary": "Owner qualitative assessment, not independent UX evidence or completed baseline capture.",
+      "evidence_domain": "owner_direction"
     },
     {
       "id": "F4",
@@ -82,7 +85,8 @@
         "https://github.com/Pukujan/content-market-frame/blob/main/README.md"
       ],
       "visibility": "sanitized",
-      "boundary": "Working direction in current conversation, not approval to generate/deploy Version B."
+      "boundary": "Working direction in current conversation, not approval to generate/deploy Version B.",
+      "evidence_domain": "owner_direction"
     }
   ],
   "decisions": [
