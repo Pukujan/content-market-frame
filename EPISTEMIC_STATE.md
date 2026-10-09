@@ -163,6 +163,20 @@
 
 ---
 
+## PEF → ABA pre-build integration — 2026-10-08
+
+**OWNER DIRECTION:** Proceed with actual adapter connecting owner-approved framing to the app builder while preserving the accepted story and preventing auto-approved blueprint drift; keep ACS A and deployment unchanged.
+
+**OBSERVED (private app-builder source):** The current supported runner auto-approves its own model-generated blueprint in ordinary unattended tasks. That builder-internal transition is not a human acceptance of commercial or product intent.
+
+**IMPLEMENTED AS DRAFT PR, NOT MERGED:** The ABA repository has issue #60 and draft PR #61 with an opt-in PEF mode that verifies compiler output/source approval digests, saves an exact plan-only blueprint, requires a recorded owner approval of its hash before build, blocks blueprint alteration and detects PEF specs accidentally handed to the unreviewed legacy path. An isolated PEF CI run passed offline hash-parity and negative tests. Private implementation details and test fixture contents are intentionally not mirrored into this public repo.
+
+**NOT YET VERIFIED:** Full ABA normal CI, merging, PCM issue/projection/receipt completion, live LLM plan/build, semantic parity of rendered app, actual owner approval, and any ACS B generation. A SHA-256 digest proves byte-level consistency, not truth of user needs, authenticity of a reviewer or quality of final UX.
+
+**NEXT:** Review draft PR and required repo lifecycle, then verify one approved non-production test run. Actual site generation and deployment are separate authorizations.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
