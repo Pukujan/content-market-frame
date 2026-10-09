@@ -37,6 +37,7 @@ jobs:
           python -m json.tool router/pef-questions.schema.json > /dev/null
           python -m json.tool router/pef-experience.schema.json > /dev/null
           python -m json.tool examples/acs-version-b.questions.json > /dev/null
+          python -m json.tool examples/acs-version-b.experience.draft.json > /dev/null
           python -m json.tool examples/acs-version-b.run.json > /dev/null
       - name: Validate run against JSON Schema
         run: |
@@ -55,7 +56,11 @@ jobs:
             Draft202012Validator(s).validate(json.load(open(example_path)))
           s = json.load(open('router/pef-experience.schema.json'))
           Draft202012Validator.check_schema(s)
-          print('PEF JSON schema PASS')
+          draft = json.load(open('examples/acs-version-b.experience.draft.json'))
+          Draft202012Validator(s).validate(draft)
+          assert draft['review']['status'] == 'draft'
+          assert draft['cta']['behavior_verified'] is False
+          print('PEF JSON schema PASS; B experience draft remains unapproved')
           PY
           python scripts/pef.py validate-qa examples/acs-version-b.run.json examples/acs-version-b.questions.json
           python scripts/pef.py questions examples/acs-version-b.run.json examples/acs-version-b.questions.json > /tmp/pef-owner-review.json
@@ -65,9 +70,21 @@ jobs:
           python - <<'PY'
           import json
           q = json.load(open('/tmp/pef-owner-review.json'))
-          assert q['blocking_total'] == 3
-          assert len(q['questions']) == 3
-          print('Draft stays blocked; questions available')
+          assert q['blocking_total'] == 2
+          assert [x['id'] for x in q['questions']] == ['Q3','Q2']
+          print('Audience decision persists; exactly two substantive QA items remain')
+          PY
+          python - <<'PY'
+          import subprocess
+          args=['python','scripts/pef.py','check-brief',
+            'examples/acs-version-b.run.json',
+            'examples/acs-version-b.questions.json',
+            'examples/acs-version-b.experience.draft.json']
+          result = subprocess.run(args,capture_output=True,text=True)
+          assert result.returncode != 0, 'Draft was incorrectly accepted for ABA'
+          assert 'Cannot send to ABA' in result.stderr or 'Blocking owner QA' in result.stderr
+          print('Expected fail-closed check PASS: ABA cannot receive unapproved ACS B')
+          PY
           PY
       - name: Validate draft ACS-B run record
         run: python scripts/frame.py validate examples/acs-version-b.run.json
