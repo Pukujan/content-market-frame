@@ -1,0 +1,31 @@
+name: ACS B consuming-site handoff
+
+on:
+  push:
+    paths:
+      - 'adopters/acs-market-b/**'
+      - '.github/workflows/acs-b-adopter.yml'
+  pull_request:
+    paths:
+      - 'adopters/acs-market-b/**'
+      - '.github/workflows/acs-b-adopter.yml'
+  workflow_dispatch:
+
+jobs:
+  verify-consumer-contract:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Parse consumer adapter and test without model or app
+        run: |
+          node --check adopters/acs-market-b/run.mjs
+          node --test adopters/acs-market-b/run.test.mjs
+      - name: Confirm no generator output is claimed by source-only tests
+        run: |
+          test ! -d adopters/acs-market-b/dist
+          echo 'PASS: consumer input validated; actual ABA model generation is a separate run'
