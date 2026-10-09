@@ -6,6 +6,18 @@ This repository exists because a technically competent agent can still sell the 
 
 **Status:** v0.1 implementation of the router and structural validation, **not** a proven cross-repository standard. The current ACS site is a substantial but not final positive baseline according to its owner. No Version B site has been generated or authorized by this repo.
 
+## Product & Experience Framing — runnable PEF slice
+
+**[PEF runbook](router/PEF_RUNBOOK.md)** describes the now implemented conditional owner-QA packet, [QA schema](router/pef-questions.schema.json), [Experience Brief schema](router/pef-experience.schema.json), and [fail-closed ABA input compiler](scripts/pef.py). The generator outputs a **source-locked build specification, not a running site**. No CGM/ABA source changes or ACS-B generation are implied.
+
+Try the **unanswered** ACS-B review packet without making any design decision:
+
+~~~bash
+python scripts/pef.py questions examples/acs-version-b.run.json examples/acs-version-b.questions.json
+~~~
+
+Compilation requires approved S3/S4/S5 decisions and a verified CTA; current ACS B remains blocked. The actual ABA runner, imagery and deployment are separate, explicitly authorized actions.
+
 ## Start with the router
 
 | Resource | Use |
