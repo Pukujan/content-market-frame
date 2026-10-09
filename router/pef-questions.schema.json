@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Pukujan/content-market-frame/blob/main/router/pef-questions.schema.json",
+  "title": "PEF selective owner review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "questions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "pef.questions.v1"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    }
+  },
+  "$defs": {
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "impact",
+        "blocking",
+        "question",
+        "why_ambiguous",
+        "consequence",
+        "evidence_fact_ids",
+        "affected_decision_ids",
+        "options",
+        "recommended_option_id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^Q[0-9]+$"
+        },
+        "status": {
+          "enum": [
+            "open",
+            "answered",
+            "deferred"
+          ]
+        },
+        "impact": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "blocking": {
+          "type": "boolean"
+        },
+        "question": {
+          "type": "string",
+          "minLength": 10
+        },
+        "why_ambiguous": {
+          "type": "string",
+          "minLength": 5
+        },
+        "consequence": {
+          "type": "string",
+          "minLength": 5
+        },
+        "evidence_fact_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^F[0-9]+$"
+          }
+        },
+        "affected_decision_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^D[0-9]+$"
+          }
+        },
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "label"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "label": {
+                "type": "string",
+                "minLength": 3
+              },
+              "tradeoff": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "recommended_option_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "answer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "choice_id",
+            "answered_by",
+            "answer_ref"
+          ],
+          "properties": {
+            "choice_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "answered_by": {
+              "type": "string",
+              "minLength": 1
+            },
+            "answer_ref": {
+              "type": "string",
+              "minLength": 3
+            },
+            "note": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
