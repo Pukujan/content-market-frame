@@ -120,6 +120,17 @@
       "visibility": "sanitized",
       "evidence_domain": "owner_direction",
       "boundary": "Accepts only a qualitative direction. Does not substantiate time savings, choose exact headline/position, authorize CTA behavior, approve storyboard or permit ABA generation."
+    },
+    {
+      "id": "F8",
+      "statement": "Owner clarified that the primary purpose of market-facing ACS Version B is to introduce the product quickly and relatably, then explain the human problem, market fit, solution, proof/sales opportunity, and technical detail.",
+      "status": "owner_direction",
+      "source_refs": [
+        "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072629118"
+      ],
+      "visibility": "sanitized",
+      "evidence_domain": "owner_direction",
+      "boundary": "This approves the product-introduction objective and desired content concerns only. Suggested exact section order, headline, CTA, visuals and market claims are not thereby accepted."
     }
   ],
   "decisions": [
@@ -198,6 +209,20 @@
       ],
       "reviewed_by": "project owner (Q2 benefit choice)",
       "approval_ref": "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072601286"
+    },
+    {
+      "id": "D7",
+      "kind": "product_scope",
+      "status": "accepted",
+      "statement": "Make ACS Version B first and foremost a clear product introduction for the selected individual builder, using short plain-language explanation and an emotionally relatable problem, with supporting solution, proof/evaluation and technical depth.",
+      "reason": "Explicit owner statement of marketing-page purpose. Recommended precise information architecture remains a proposal for independent creative review.",
+      "fact_ids": [
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "reviewed_by": "project owner (market page objective)",
+      "approval_ref": "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072629118"
     }
   ],
   "rejections": [
@@ -214,14 +239,18 @@
   "scenes": [
     {
       "id": "SC1",
-      "question": "Why am I spending attention managing agents instead of building?",
-      "belief_change": "Recognize the extra job as a plausible human problem, not a proven customer observation.",
-      "visual_job": "A single real project-in-progress and human attention divided between making and reorientation.",
+      "question": "What is ACS, is it for me, and why might it matter?",
+      "belief_change": "Identify ACS as an integrated repository-installed multi-agent working arrangement and relate it to the independent builder's coordination burden within the first screen.",
+      "visual_job": "Immediately show a concise, recognizable product category and a real project-facing example, paired with human benefit; do not delay product identification until scene 3.",
       "depends_on_decisions": [
         "D3",
-        "D4"
+        "D4",
+        "D7"
       ],
-      "claim_ids": [],
+      "claim_ids": [
+        "C2",
+        "C4"
+      ],
       "status": "draft",
       "media_contract": "Conceptual storyboard; no visual assets generated or reviewed."
     },
@@ -240,12 +269,13 @@
     },
     {
       "id": "SC3",
-      "question": "What product is this actually?",
-      "belief_change": "Understand ACS as a local repo-installed shared working surface, not a hosted AI brain.",
+      "question": "How does this arrangement concretely work inside a repository?",
+      "belief_change": "Deepen understanding of the already-introduced repo-installed product rather than reveal its category for the first time.",
       "visual_job": "Repo-centered install surface showing durable records and participating systems; conceptual until actual captures are approved.",
       "depends_on_decisions": [
         "D1",
-        "D4"
+        "D4",
+        "D7"
       ],
       "claim_ids": [
         "C2",
@@ -287,9 +317,9 @@
     },
     {
       "id": "SC6",
-      "question": "What must I not assume?",
-      "belief_change": "Know which responsibilities stay human and which setup/compatibility claims are conditional.",
-      "visual_job": "Compact honest limitations integrated into experience rather than a source audit dumped into hero.",
+      "question": "What proof and honest limitations let me evaluate it?",
+      "belief_change": "Separate inspectable source-backed product behavior from buyer benefit hypotheses, independent research and installation limitations.",
+      "visual_job": "Attach short evidence to relevant product claims and make deeper technical and compatibility docs available without front-loading an audit.",
       "depends_on_decisions": [
         "D1",
         "D4"
@@ -363,14 +393,15 @@
     }
   ],
   "handoff": {
-    "summary": "Owner accepted Q1 individual builder (D3) and Q2 return-attention benefit direction (D6). Exact position/headline D4, CTA D5, storyboard and creative gates remain draft. Q3 requires owner clarification before defining any click. Baseline A untouched.",
+    "summary": "Owner approved Q1 individual-builder audience (D3), Q2 qualitative return-attention benefit (D6), and product-introduction site objective (D7). Exact copy, IA/sections, Q3 CTA, S3–S5 creative approvals and ABA remain unapproved. Draft first scene now names ACS immediately.",
     "fact_ids": [
       "F1",
       "F2",
       "F3",
       "F5",
       "F6",
-      "F7"
+      "F7",
+      "F8"
     ],
     "decision_ids": [
       "D1",
@@ -378,14 +409,15 @@
       "D3",
       "D4",
       "D5",
-      "D6"
+      "D6",
+      "D7"
     ],
     "open_questions": [
       "Q3 only: what outcome should the primary website action deliver when clicked, and what real behavior or effects should occur?",
       "Exact hero wording, storyboard and Experience Brief need separate editorial acceptance.",
       "Baseline A still has no independent captured visual/browser record."
     ],
-    "next_action": "Ask owner one open-ended Q3 primary-action question. Do not implement a CTA, generate B, or pass to ABA until Q3 and independent S3/S4/S5 gates are resolved."
+    "next_action": "Propose immediate product-first hero and problem→solution→proof→evaluation page hierarchy for creative review. Q3 still needs its actual click purpose clarified separately; no ABA or deployment."
   },
   "history": [
     {
@@ -414,6 +446,12 @@
       "action": "benefit_direction_selected_cta_unresolved",
       "ref": "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072601286",
       "detail": "Q2 explicit benefit direction accepted as D6, not exact headline or S3 signoff. Q3 requests clarification, not an answer; invalidated proposed SC7 CTA details. All gates remain unaccepted."
+    },
+    {
+      "at": "2026-10-08",
+      "action": "owner_clarified_product_introduction_objective",
+      "detail": "Accepted D7 that Version B introduces the product immediately and relatably; recommended IA remains draft. Shifted proposed SC1 to name ACS before deep problem narrative. Q3 CTA still unselected.",
+      "ref": "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072629118"
     }
   ],
   "comparison": {
