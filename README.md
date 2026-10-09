@@ -8,7 +8,7 @@ This repository exists because a technically competent agent can still sell the 
 
 ## Product & Experience Framing — runnable PEF slice
 
-**[PEF runbook](router/PEF_RUNBOOK.md)** describes the now implemented conditional owner-QA packet, [QA schema](router/pef-questions.schema.json), [Experience Brief schema](router/pef-experience.schema.json), and [fail-closed ABA input compiler](scripts/pef.py). The generator outputs a **source-locked build specification, not a running site**. No CGM/ABA source changes or ACS-B generation are implied.
+**[PEF agent skill](modules/product-experience-framing/SKILL.md)** is the narrow, purpose-routed module entry point (incubating here, not registered in CGM). **[PEF runbook](router/PEF_RUNBOOK.md)** describes the now implemented conditional owner-QA packet, [QA schema](router/pef-questions.schema.json), [Experience Brief schema](router/pef-experience.schema.json), and [fail-closed ABA input compiler](scripts/pef.py). The generator outputs a **source-locked build specification, not a running site**. No CGM/ABA source changes or ACS-B generation are implied.
 
 Try the **unanswered** ACS-B review packet without making any design decision:
 
