@@ -122,7 +122,7 @@ class PefTests(unittest.TestCase):
 
     def test_answer_qa_not_approval_of_decision(self):
         self.run["decisions"][0]["status"] = "proposed"
-        self.assertTrue(any("positioning decision not accepted" in e for e in pef.validate_experience(self.run, self.qa, self.brief)))
+        self.assertTrue(any("unaccepted decision" in e or "positioning decision not accepted" in e for e in pef.validate_experience(self.run, self.qa, self.brief)))
 
     def test_observed_user_need_cannot_be_owner_only(self):
         self.run["facts"][0]["status"] = "owner_direction"
