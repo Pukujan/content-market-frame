@@ -98,6 +98,17 @@
       "visibility": "sanitized",
       "evidence_domain": "owner_direction",
       "boundary": "Authorizes framing work, not implicit story approval, ABA code generation or deployment."
+    },
+    {
+      "id": "F6",
+      "statement": "Owner explicitly selected the individual builder experiencing repeated AI-agent handoff and reorientation work as the first intended audience for market-facing ACS Version B.",
+      "status": "owner_direction",
+      "source_refs": [
+        "https://github.com/Pukujan/content-market-frame/issues/1"
+      ],
+      "visibility": "sanitized",
+      "evidence_domain": "owner_direction",
+      "boundary": "This is accepted intended audience direction, not independent customer research, market demand evidence, positioning signoff or generation authorization."
     }
   ],
   "decisions": [
@@ -126,14 +137,17 @@
     {
       "id": "D3",
       "kind": "audience",
-      "status": "proposed",
+      "status": "accepted",
       "statement": "Lead Version B with the individual long-project builder burdened by agent handoffs, ownership and reorientation; keep engineering team lead as a secondary candidate.",
-      "reason": "Directly human-recognizable and spans installed ACS/PCM/OIO/CGM rather than one mechanism.",
+      "reason": "Explicit owner selection of individual builder and repeated handoff burden, recorded in issue #1. Lead-audience decision only.",
       "fact_ids": [
         "F1",
         "F3",
-        "F5"
-      ]
+        "F5",
+        "F6"
+      ],
+      "reviewed_by": "project owner (direct audience selection)",
+      "approval_ref": "https://github.com/Pukujan/content-market-frame/issues/1"
     },
     {
       "id": "D4",
@@ -173,12 +187,13 @@
   "scenes": [],
   "claims": [],
   "handoff": {
-    "summary": "Pinned ACS source supports market-facing Version B framing, but no story, CTA or production work is approved. Proposed human-first B concept and seven belief scenes are in plans/ACS_VERSION_B_MARKET_PAGE_FRAME.md. Baseline A site capture was unavailable to the reviewer; retain unchanged. Resolve lead audience/position and primary CTA with the owner before creative lock or ABA.",
+    "summary": "Q1 lead audience was explicitly selected by owner: individual builder carrying repeated AI-agent handoff and context reorientation burden. Only D3 accepted; positioning D4, CTA D5, creative storyboard and production remain proposed/draft. Review Q2 benefit promise and Q3 CTA before locking an Experience Brief or ABA.",
     "fact_ids": [
       "F1",
       "F2",
       "F3",
-      "F5"
+      "F5",
+      "F6"
     ],
     "decision_ids": [
       "D1",
@@ -188,11 +203,11 @@
       "D5"
     ],
     "open_questions": [
-      "Does B lead with individual long-project builder / handoff burden, or a team operator's shared coordination?",
-      "Will the primary CTA be a truthful read-only walkthrough or a source-linked setup guide?",
-      "Can we freeze a reliable screenshot/copy/behavior capture of Baseline A before comparison?"
+      "Q2: Should the lead promise be returning attention to meaningful project work, or specifically continuity across sessions? This is a direction, not measured efficacy.",
+      "Q3: Should the primary site action be a read-only walkthrough or a direct link to pinned setup instructions?",
+      "Can Baseline A visible design/copy/behavior be captured at a verifiable immutable reference before comparison?"
     ],
-    "next_action": "Owner reviews concise B framing alternatives and CTA behavior; then author approved Experience Brief before isolated ABA build."
+    "next_action": "Review draft Experience Brief and answer Q2/Q3. Do not compile ABA or generate B until distinct S3/S4/S5 owner approvals."
   },
   "history": [
     {
@@ -204,6 +219,12 @@
       "at": "2026-10-08",
       "action": "source_pinned_and_b_story_proposed",
       "detail": "Pinned ACS main SHA; added human-first B market-page candidate and distinct owner decisions. No gate accepted, no site generation or deployment."
+    },
+    {
+      "at": "2026-10-08",
+      "action": "owner_selected_lead_audience",
+      "detail": "Explicit chat choice of individual builder and repeated handoff burden. Accepted D3 and answered Q1 only; strategy, CTA, storyboard and site generation not approved.",
+      "ref": "https://github.com/Pukujan/content-market-frame/issues/1"
     }
   ],
   "comparison": {
