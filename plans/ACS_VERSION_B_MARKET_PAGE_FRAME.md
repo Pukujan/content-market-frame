@@ -1,6 +1,6 @@
 # ACS market-facing website — Version B framing candidate
 
-**Status:** PROPOSED creative direction, not approved for ABA generation or deployment.
+**Status:** Individual-builder audience owner-selected ([decision #1](https://github.com/Pukujan/content-market-frame/issues/1)); headline, promise, CTA, scenes and all build gates remain PROPOSED.
 **Prepared:** 2026-10-08.
 **Source of truth:** [ACS repository at 264117398e7754d7e91076481cd664b5e197c1d4](https://github.com/Pukujan/agent-custom-setup/tree/264117398e7754d7e91076481cd664b5e197c1d4); specifically [PROJECT.md](https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/PROJECT.md) and [multi-agent hotload README](https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/modules/coordination/multi-agent-hotload/v0.1.0/README.md).
 **Baseline A:** https://acs.design-bakery.com/ — owner-favored but not final; live visual/browser capture **not independently obtained**, so no pixel/section comparison with A is asserted.
@@ -16,11 +16,11 @@
 
 ## Human-job working hypothesis (not validated by external user research)
 
-**Primary candidate:** A technically capable independent builder or project operator running multiple AI agents on a real repository over many sessions. Their actual project competes with a recurring *second job*: assign work, stop overlap, reassemble context, track decisions/issue history, check approvals and turn output into something another person can follow.
+**Owner-selected lead audience:** A technically capable independent builder or project operator running multiple AI agents on a real repository over many sessions. Their actual project competes with a recurring *second job*: assign work, stop overlap, reassemble context, track decisions/issue history, check approvals and turn output into something another person can follow.
 
 **Observed user behavior:** UNKNOWN; no interviewed adopter quoted. The owner can select this as the lead intended audience without converting it into observed buyer data.
 
-**Market alternative:** An engineering lead whose central need is team-level shared accountability. This remains a second candidate; do not silently collapse it into the first.
+**Secondary audience:** An engineering lead whose central need is team-level shared accountability. Do not promote this to the lead over the owner's chosen individual builder.
 
 **Desired human progression:** From “I am managing the agents more than the work” to “the repository has explicit working rules; I can inspect what will be installed and decide deliberately.”
 
@@ -79,11 +79,19 @@ All source/backend states require checking against actual supported script behav
 
 ## Two stage-specific owner decisions, not a full discovery interview
 
-**Q1 — Lead visitor / opening tension:** Prefer **independent operator and the repeated handoff burden** (B1), or team lead and coordination accountability (B3), or neither? This determines positioning and scene choices.
+**Q1 — Lead visitor (ANSWERED):** Owner explicitly selected the individual long-project builder and repeated agent handoff burden, recorded in [issue #1](https://github.com/Pukujan/content-market-frame/issues/1). This approves the intended lead audience, **not** B1's exact headline or promise.
 
-**Q2 — Safe primary CTA:** Prefer **read-only walkthrough of the setup** (with explicit simulation label if appropriate) or **link to pinned installation instructions**? No real setup action from an untrusted browser without separate technical verification.
+**Q2 — Main promised benefit (OPEN):** Lead with **returning attention to the actual project work** (recommended, qualitative intended benefit), **durable context across sessions** (risks PCM-only scope), or a correction.
+
+**Q3 — Safe primary CTA (OPEN):** Prefer **read-only walkthrough of the setup** (with explicit explanatory label; recommended) or **link to pinned installation instructions**? No real setup action from an untrusted browser without separate technical verification.
 
 Avoid asking the owner to decide palettes, component types or exact wording before the strategic human story is accepted. The agent can prepare those options autonomously.
+
+## Draft PEF Experience Brief (not production-authorized)
+
+The [source-pinned ACS B Experience Brief](../examples/acs-version-b.experience.draft.json) is a typed design artifact with seven buyer-belief scenes, two provisional visitor tasks, service/CTA trace, four narrowly source-grounded mechanism claims and acceptance tests. Its intended actor reflects Q1; user need is an **owner hypothesis**, not observed research.
+
+**Its review is DRAFT; proposed read-only CTA behavior is NOT VERIFIED.** Q2 benefit promise and Q3 CTA remain blocking. The compiler must refuse the draft until S3/S4/S5 approvals and actual link/CTA verification. Version A remains untouched.
 
 ## ABA handoff restrictions
 
