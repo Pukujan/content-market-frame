@@ -146,6 +146,17 @@
         "F2",
         "F5"
       ]
+    },
+    {
+      "id": "D5",
+      "kind": "cta",
+      "status": "proposed",
+      "statement": "Version B primary action is a no-write product walkthrough or a direct link to source-pinned setup instructions; exact behavior must be selected and verified before copy lock.",
+      "reason": "A website preview must not imply local installer execution or mutate a visitor repo.",
+      "fact_ids": [
+        "F2",
+        "F5"
+      ]
     }
   ],
   "rejections": [
@@ -173,7 +184,8 @@
       "D1",
       "D2",
       "D3",
-      "D4"
+      "D4",
+      "D5"
     ],
     "open_questions": [
       "Does B lead with individual long-project builder / handoff burden, or a team operator's shared coordination?",
