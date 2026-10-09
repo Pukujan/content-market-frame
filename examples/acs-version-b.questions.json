@@ -1,0 +1,102 @@
+{
+  "schema_version": "pef.questions.v1",
+  "run_id": "acs-version-b-framing-001",
+  "questions": [
+    {
+      "id": "Q1",
+      "status": "open",
+      "impact": "high",
+      "blocking": true,
+      "question": "Which intended visitor's problem should Version B lead with?",
+      "why_ambiguous": "The product can help individual maintainers and teams, but source capabilities alone do not establish which is the intended lead market.",
+      "consequence": "Changes the protagonist, opening situation, value framing, storyboard, and page hierarchy.",
+      "evidence_fact_ids": [
+        "F1",
+        "F3"
+      ],
+      "affected_decision_ids": [
+        "D1"
+      ],
+      "options": [
+        {
+          "id": "individual",
+          "label": "Individual builder maintaining a long project",
+          "tradeoff": "Concrete emotional burden; may underrepresent team coordination"
+        },
+        {
+          "id": "team",
+          "label": "Team lead coordinating shared project work",
+          "tradeoff": "Broader governance needs; can drift into audit language"
+        },
+        {
+          "id": "other",
+          "label": "Neither; I will correct the lead user and problem"
+        }
+      ],
+      "recommended_option_id": "individual"
+    },
+    {
+      "id": "Q2",
+      "status": "open",
+      "impact": "high",
+      "blocking": true,
+      "question": "Which main promise is acceptable without claiming measured time savings?",
+      "why_ambiguous": "Source verifies specified mechanisms more readily than externally observed adoption outcomes or quantitative improvements.",
+      "consequence": "Controls hero promise, marketing proof, image text, and what QA must verify.",
+      "evidence_fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "affected_decision_ids": [
+        "D1"
+      ],
+      "options": [
+        {
+          "id": "attention",
+          "label": "Position as returning attention to the real project work",
+          "tradeoff": "Qualitative intended benefit, not a guaranteed result"
+        },
+        {
+          "id": "continuity",
+          "label": "Lead with durable project context across sessions",
+          "tradeoff": "Risks narrowing the integrated system into only PCM"
+        },
+        {
+          "id": "other",
+          "label": "Neither; propose different benefit and limits"
+        }
+      ],
+      "recommended_option_id": "attention"
+    },
+    {
+      "id": "Q3",
+      "status": "open",
+      "impact": "critical",
+      "blocking": true,
+      "question": "What should the Version B demo CTA actually be permitted to do?",
+      "why_ambiguous": "A preview, simulation, local installer, and live-repository action have different user expectations and side-effect risks.",
+      "consequence": "Changes UX flow, CTA wording, service blueprint and any permissible network/file operations.",
+      "evidence_fact_ids": [
+        "F2"
+      ],
+      "affected_decision_ids": [
+        "D2"
+      ],
+      "options": [
+        {
+          "id": "readonly",
+          "label": "Read-only illustration or preview, with clear disclosure"
+        },
+        {
+          "id": "external",
+          "label": "Link to actual setup instructions, with no write action from the website"
+        },
+        {
+          "id": "other",
+          "label": "Other; describe exact authorized behavior"
+        }
+      ],
+      "recommended_option_id": "readonly"
+    }
+  ]
+}
