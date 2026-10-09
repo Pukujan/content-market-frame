@@ -184,10 +184,159 @@
       "evidence_ref": "https://github.com/Pukujan/content-market-frame/blob/main/CASE_STUDY_ACS.md"
     }
   ],
-  "scenes": [],
-  "claims": [],
+  "scenes": [
+    {
+      "id": "SC1",
+      "question": "Why am I spending attention managing agents instead of building?",
+      "belief_change": "Recognize the extra job as a plausible human problem, not a proven customer observation.",
+      "visual_job": "A single real project-in-progress and human attention divided between making and reorientation.",
+      "depends_on_decisions": [
+        "D3",
+        "D4"
+      ],
+      "claim_ids": [],
+      "status": "draft",
+      "media_contract": "Conceptual storyboard; no visual assets generated or reviewed."
+    },
+    {
+      "id": "SC2",
+      "question": "What keeps repeating across work sessions?",
+      "belief_change": "See repeated handoffs, ownership, approvals and explanation as one pattern, beyond a single tool feature.",
+      "visual_job": "Same maker across a few session boundaries; concrete friction beats rather than invented customer testimony.",
+      "depends_on_decisions": [
+        "D3",
+        "D4"
+      ],
+      "claim_ids": [],
+      "status": "draft",
+      "media_contract": "Conceptual storyboard; no visual assets generated or reviewed."
+    },
+    {
+      "id": "SC3",
+      "question": "What product is this actually?",
+      "belief_change": "Understand ACS as a local repo-installed shared working surface, not a hosted AI brain.",
+      "visual_job": "Repo-centered install surface showing durable records and participating systems; conceptual until actual captures are approved.",
+      "depends_on_decisions": [
+        "D1",
+        "D4"
+      ],
+      "claim_ids": [
+        "C2",
+        "C4"
+      ],
+      "status": "draft",
+      "media_contract": "Conceptual storyboard; no visual assets generated or reviewed."
+    },
+    {
+      "id": "SC4",
+      "question": "How do four distinct systems help one project?",
+      "belief_change": "Connect coordination, continuity/governance, issue provenance and content guidance into one installer contract without blending ownership.",
+      "visual_job": "Four linked functions with their own source-owned names, not a dashboard claiming ACS implemented everything.",
+      "depends_on_decisions": [
+        "D1",
+        "D4"
+      ],
+      "claim_ids": [
+        "C1",
+        "C2"
+      ],
+      "status": "draft",
+      "media_contract": "Conceptual storyboard; no visual assets generated or reviewed."
+    },
+    {
+      "id": "SC5",
+      "question": "What would change if I considered installing it?",
+      "belief_change": "Understand prerequisites, deliberate install/check, READY vs PARTIAL, and permission boundaries.",
+      "visual_job": "Three-step explanatory flow with clearly labelled conceptual READY/PARTIAL; no simulated real output disguised as live.",
+      "depends_on_decisions": [
+        "D4",
+        "D5"
+      ],
+      "claim_ids": [
+        "C3"
+      ],
+      "status": "draft",
+      "media_contract": "Conceptual storyboard; no visual assets generated or reviewed."
+    },
+    {
+      "id": "SC6",
+      "question": "What must I not assume?",
+      "belief_change": "Know which responsibilities stay human and which setup/compatibility claims are conditional.",
+      "visual_job": "Compact honest limitations integrated into experience rather than a source audit dumped into hero.",
+      "depends_on_decisions": [
+        "D1",
+        "D4"
+      ],
+      "claim_ids": [
+        "C3",
+        "C4"
+      ],
+      "status": "draft",
+      "media_contract": "Conceptual storyboard; no visual assets generated or reviewed."
+    },
+    {
+      "id": "SC7",
+      "question": "How do I explore it safely?",
+      "belief_change": "Know the next action is informational unless a separately authorized install is performed.",
+      "visual_job": "Read-only walkthrough or pinned setup link; final behavior awaits Q3.",
+      "depends_on_decisions": [
+        "D4",
+        "D5"
+      ],
+      "claim_ids": [
+        "C4"
+      ],
+      "status": "draft",
+      "media_contract": "Conceptual storyboard; no visual assets generated or reviewed."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "wording": "The ACS coordination runtime specifies join-order agent roles, boss lease and FIFO failover, claim ownership, watchdog signals and accepted proposals leading to PRs.",
+      "claim_type": "mechanism",
+      "source_refs": [
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/PROJECT.md",
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/modules/coordination/multi-agent-hotload/v0.1.0/README.md"
+      ],
+      "status": "verified",
+      "limitations": "Verified as described in pinned product/pack documentation; this is not a claim of measured adopter outcomes or a fresh install demonstration."
+    },
+    {
+      "id": "C2",
+      "wording": "The integrated hotload pack declares pinned PCM continuity and delivery governance, OIO issue recording, CGM content guidance, and ACS execution coordination as distinct participating components.",
+      "claim_type": "mechanism",
+      "source_refs": [
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/modules/coordination/multi-agent-hotload/v0.1.0/README.md",
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/PROJECT.md"
+      ],
+      "status": "verified",
+      "limitations": "Describes the product contract, not ownership of PCM/OIO/CGM by ACS or proof all installations are presently compatible."
+    },
+    {
+      "id": "C3",
+      "wording": "The installer/check flow is designed to reject incomplete required setup rather than reporting it as a complete install; installed features require prerequisites and version compatibility.",
+      "claim_type": "mechanism",
+      "source_refs": [
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/modules/coordination/multi-agent-hotload/v0.1.0/README.md"
+      ],
+      "status": "verified",
+      "limitations": "Contract-described fail-closed behavior, not a verified successful install against an arbitrary repository."
+    },
+    {
+      "id": "C4",
+      "wording": "ACS is a repo-installed coordination/hotload arrangement, not a hosted service or an autonomous decision-maker.",
+      "claim_type": "mechanism",
+      "source_refs": [
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/README.md",
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/PROJECT.md"
+      ],
+      "status": "verified",
+      "limitations": "Do not imply that a website preview installs, writes or starts a production agent session."
+    }
+  ],
   "handoff": {
-    "summary": "Q1 lead audience was explicitly selected by owner: individual builder carrying repeated AI-agent handoff and context reorientation burden. Only D3 accepted; positioning D4, CTA D5, creative storyboard and production remain proposed/draft. Review Q2 benefit promise and Q3 CTA before locking an Experience Brief or ABA.",
+    "summary": "Owner approved individual-builder audience (D3/Q1). PEF Experience Brief has seven proposed belief scenes, bounded product claims and conditional read-only UX/service map. Q2 benefit frame and Q3 CTA behavior remain blocking; no S3/S4/S5 acceptance or ABA build authorization.",
     "fact_ids": [
       "F1",
       "F2",
@@ -207,7 +356,7 @@
       "Q3: Should the primary site action be a read-only walkthrough or a direct link to pinned setup instructions?",
       "Can Baseline A visible design/copy/behavior be captured at a verifiable immutable reference before comparison?"
     ],
-    "next_action": "Review draft Experience Brief and answer Q2/Q3. Do not compile ABA or generate B until distinct S3/S4/S5 owner approvals."
+    "next_action": "Owner selects/corrects Q2 promised benefit and Q3 primary CTA. Then reassess positioning/story/creative acceptance and test actual preview/link behavior before compiling or building."
   },
   "history": [
     {
@@ -225,6 +374,11 @@
       "action": "owner_selected_lead_audience",
       "detail": "Explicit chat choice of individual builder and repeated handoff burden. Accepted D3 and answered Q1 only; strategy, CTA, storyboard and site generation not approved.",
       "ref": "https://github.com/Pukujan/content-market-frame/issues/1"
+    },
+    {
+      "at": "2026-10-08",
+      "action": "draft_story_and_claim_map_created",
+      "detail": "Seven draft belief scenes SC1–SC7 and four source-grounded mechanism claims C1–C4 created as inputs to an unapproved PEF Experience Brief. No scene/gate accepted."
     }
   ],
   "comparison": {
