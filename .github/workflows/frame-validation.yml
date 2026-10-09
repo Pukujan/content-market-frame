@@ -85,7 +85,6 @@ jobs:
           assert 'Cannot send to ABA' in result.stderr or 'Blocking owner QA' in result.stderr
           print('Expected fail-closed check PASS: ABA cannot receive unapproved ACS B')
           PY
-          PY
       - name: Validate draft ACS-B run record
         run: python scripts/frame.py validate examples/acs-version-b.run.json
       - name: Ensure context packet is bounded
