@@ -109,6 +109,17 @@
       "visibility": "sanitized",
       "evidence_domain": "owner_direction",
       "boundary": "This is accepted intended audience direction, not independent customer research, market demand evidence, positioning signoff or generation authorization."
+    },
+    {
+      "id": "F7",
+      "statement": "Owner selected 'Return attention to actual project work' as the market-facing B lead benefit direction, while expressly requesting clarification rather than choosing a primary website CTA.",
+      "status": "owner_direction",
+      "source_refs": [
+        "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072601286"
+      ],
+      "visibility": "sanitized",
+      "evidence_domain": "owner_direction",
+      "boundary": "Accepts only a qualitative direction. Does not substantiate time savings, choose exact headline/position, authorize CTA behavior, approve storyboard or permit ABA generation."
     }
   ],
   "decisions": [
@@ -154,23 +165,39 @@
       "kind": "positioning",
       "status": "proposed",
       "statement": "Working B concept: Build with agents. Stop managing every handoff. Describe integrated repo-level working rules with explicit limitations and no ROI/time-saving statistics.",
-      "reason": "Proposed differentiation from process-audit storytelling; not selected or independently tested.",
+      "reason": "Working exact headline and full commercial position are still proposed; approved D6 selects the qualitative attention-to-work benefit direction only, without accepting this wording or claims.",
       "fact_ids": [
         "F1",
         "F2",
-        "F5"
+        "F5",
+        "F7"
       ]
     },
     {
       "id": "D5",
       "kind": "cta",
       "status": "proposed",
-      "statement": "Version B primary action is a no-write product walkthrough or a direct link to source-pinned setup instructions; exact behavior must be selected and verified before copy lock.",
-      "reason": "A website preview must not imply local installer execution or mutate a visitor repo.",
+      "statement": "Primary market-page CTA objective, label, click behavior and side effects are UNDECIDED; owner requested clarification rather than choosing the previously offered walkthrough or documentation link.",
+      "reason": "Q3 was explicitly not answered. Previous examples are not an accepted decision; do not design a CTA control or assume a preview, docs navigation or installation.",
       "fact_ids": [
         "F2",
-        "F5"
+        "F5",
+        "F7"
       ]
+    },
+    {
+      "id": "D6",
+      "kind": "promise",
+      "status": "accepted",
+      "statement": "Lead the ACS B benefit framing with returning the individual builder's attention to their actual project work, rather than promising measured savings or reducing the installed pack to continuity alone.",
+      "reason": "Explicit Q2 owner selection, limited to intended strategic benefit direction; exact product positioning, copy and site are pending separate creative signoff.",
+      "fact_ids": [
+        "F1",
+        "F6",
+        "F7"
+      ],
+      "reviewed_by": "project owner (Q2 benefit choice)",
+      "approval_ref": "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072601286"
     }
   ],
   "rejections": [
@@ -247,7 +274,7 @@
       "id": "SC5",
       "question": "What would change if I considered installing it?",
       "belief_change": "Understand prerequisites, deliberate install/check, READY vs PARTIAL, and permission boundaries.",
-      "visual_job": "Three-step explanatory flow with clearly labelled conceptual READY/PARTIAL; no simulated real output disguised as live.",
+      "visual_job": "Show the documented prerequisites and READY/PARTIAL distinction as explanatory information; no implied walkthrough interaction or simulated live install.",
       "depends_on_decisions": [
         "D4",
         "D5"
@@ -276,9 +303,9 @@
     },
     {
       "id": "SC7",
-      "question": "How do I explore it safely?",
-      "belief_change": "Know the next action is informational unless a separately authorized install is performed.",
-      "visual_job": "Read-only walkthrough or pinned setup link; final behavior awaits Q3.",
+      "question": "What should I do next after understanding the product? OWNER CLARIFICATION PENDING.",
+      "belief_change": "The visitor should eventually understand the next action and its actual outcome; no CTA is specified until Q3 is answered.",
+      "visual_job": "Hold an explicit CTA-design slot open; do not draw a button, preview, setup link or assumed click flow.",
       "depends_on_decisions": [
         "D4",
         "D5"
@@ -287,7 +314,7 @@
         "C4"
       ],
       "status": "draft",
-      "media_contract": "Conceptual storyboard; no visual assets generated or reviewed."
+      "media_contract": "Draft placeholder depending on unanswered CTA Q3/D5. No CTA illustration, UI element, copy, asset or code authorized."
     }
   ],
   "claims": [
@@ -336,27 +363,29 @@
     }
   ],
   "handoff": {
-    "summary": "Owner selected individual builder (Q1/D3). Seven B scenes and mechanism claims drafted. Q2 benefit and Q3 CTA remain open. No storyboard, creative or build approval. Baseline A untouched.",
+    "summary": "Owner accepted Q1 individual builder (D3) and Q2 return-attention benefit direction (D6). Exact position/headline D4, CTA D5, storyboard and creative gates remain draft. Q3 requires owner clarification before defining any click. Baseline A untouched.",
     "fact_ids": [
       "F1",
       "F2",
       "F3",
       "F5",
-      "F6"
+      "F6",
+      "F7"
     ],
     "decision_ids": [
       "D1",
       "D2",
       "D3",
       "D4",
-      "D5"
+      "D5",
+      "D6"
     ],
     "open_questions": [
-      "Q2: Lead benefit—more attention for real project work, or continuity across sessions?",
-      "Q3: Primary CTA—read-only walkthrough or linked setup instructions?",
-      "Baseline A screenshot/behavior capture remains unavailable."
+      "Q3 only: what outcome should the primary website action deliver when clicked, and what real behavior or effects should occur?",
+      "Exact hero wording, storyboard and Experience Brief need separate editorial acceptance.",
+      "Baseline A still has no independent captured visual/browser record."
     ],
-    "next_action": "Resolve Q2/Q3; review framing and Experience Brief before any ABA build."
+    "next_action": "Ask owner one open-ended Q3 primary-action question. Do not implement a CTA, generate B, or pass to ABA until Q3 and independent S3/S4/S5 gates are resolved."
   },
   "history": [
     {
@@ -379,6 +408,12 @@
       "at": "2026-10-08",
       "action": "draft_story_and_claim_map_created",
       "detail": "Seven draft belief scenes SC1–SC7 and four source-grounded mechanism claims C1–C4 created as inputs to an unapproved PEF Experience Brief. No scene/gate accepted."
+    },
+    {
+      "at": "2026-10-08",
+      "action": "benefit_direction_selected_cta_unresolved",
+      "ref": "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072601286",
+      "detail": "Q2 explicit benefit direction accepted as D6, not exact headline or S3 signoff. Q3 requests clarification, not an answer; invalidated proposed SC7 CTA details. All gates remain unaccepted."
     }
   ],
   "comparison": {
