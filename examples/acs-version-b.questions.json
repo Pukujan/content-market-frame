@@ -43,7 +43,7 @@
     },
     {
       "id": "Q2",
-      "status": "open",
+      "status": "answered",
       "impact": "high",
       "blocking": true,
       "question": "Which main promise is acceptable without claiming measured time savings?",
@@ -54,7 +54,7 @@
         "F2"
       ],
       "affected_decision_ids": [
-        "D4"
+        "D6"
       ],
       "options": [
         {
@@ -72,16 +72,22 @@
           "label": "Neither; propose different benefit and limits"
         }
       ],
-      "recommended_option_id": "attention"
+      "recommended_option_id": "attention",
+      "answer": {
+        "choice_id": "attention",
+        "answered_by": "project owner (Q2 benefit choice)",
+        "answer_ref": "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072601286",
+        "note": "Selected qualitative benefit direction only: returning attention to actual project work. Not approval of D4 exact headline/positioning, any measured outcome, storyboard or builder release."
+      }
     },
     {
       "id": "Q3",
       "status": "open",
       "impact": "critical",
       "blocking": true,
-      "question": "What should the Version B demo CTA actually be permitted to do?",
-      "why_ambiguous": "A preview, simulation, local installer, and live-repository action have different user expectations and side-effect risks.",
-      "consequence": "Changes UX flow, CTA wording, service blueprint and any permissible network/file operations.",
+      "question": "What should the primary ACS market-facing website action actually do when the visitor clicks it?",
+      "why_ambiguous": "Owner explicitly requested correction/clarification instead of selecting either proposed action. Intended visitor outcome, interaction destination, read/write behavior and required safeguards are unknown.",
+      "consequence": "Determines whether there is a CTA button at all, its copy, the visitor journey, service/backend interactions, safety test contract and whether ABA may implement any action.",
       "evidence_fact_ids": [
         "F2"
       ],
@@ -91,18 +97,18 @@
       "options": [
         {
           "id": "readonly",
-          "label": "Read-only illustration or preview, with clear disclosure"
+          "label": "A non-writing product walkthrough (earlier example, not selected)"
         },
         {
           "id": "external",
-          "label": "Direct link to actual pinned setup instructions; no browser write"
+          "label": "A source-backed documentation link (earlier example, not selected)"
         },
         {
           "id": "other",
-          "label": "Other; describe exact authorized behavior"
+          "label": "An owner-defined action — describe the actual click result and any side effects"
         }
       ],
-      "recommended_option_id": "readonly"
+      "recommended_option_id": "other"
     }
   ]
 }
