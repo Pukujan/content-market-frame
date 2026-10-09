@@ -1,0 +1,342 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Pukujan/content-market-frame/blob/main/router/pef-experience.schema.json",
+  "title": "PEF experience brief for ABA compilation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "source_revision",
+    "intent",
+    "audience",
+    "position",
+    "buyer_journey",
+    "ux_tasks",
+    "service_touchpoints",
+    "creative",
+    "cta",
+    "review"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "pef.experience.v1"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 7
+    },
+    "intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "creator_purpose",
+        "user_need",
+        "user_need_status"
+      ],
+      "properties": {
+        "creator_purpose": {
+          "type": "string",
+          "minLength": 10
+        },
+        "user_need": {
+          "type": "string",
+          "minLength": 10
+        },
+        "user_need_status": {
+          "enum": [
+            "observed_user_research",
+            "owner_hypothesis",
+            "inferred_hypothesis"
+          ]
+        },
+        "evidence_fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "audience": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "actor",
+        "job",
+        "trigger",
+        "workaround"
+      ],
+      "properties": {
+        "actor": {
+          "type": "string",
+          "minLength": 3
+        },
+        "job": {
+          "type": "string",
+          "minLength": 10
+        },
+        "trigger": {
+          "type": "string",
+          "minLength": 5
+        },
+        "workaround": {
+          "type": "string",
+          "minLength": 5
+        }
+      }
+    },
+    "position": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_id",
+        "promise",
+        "claim_ids",
+        "limitations"
+      ],
+      "properties": {
+        "decision_id": {
+          "type": "string",
+          "pattern": "^D[0-9]+$"
+        },
+        "promise": {
+          "type": "string",
+          "minLength": 8
+        },
+        "claim_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^C[0-9]+$"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "buyer_journey": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scene_id",
+          "belief_change",
+          "message"
+        ],
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "pattern": "^SC[0-9]+$"
+          },
+          "belief_change": {
+            "type": "string",
+            "minLength": 4
+          },
+          "message": {
+            "type": "string",
+            "minLength": 3
+          }
+        }
+      }
+    },
+    "ux_tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "scenario",
+          "success",
+          "states"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^T[0-9]+$"
+          },
+          "scenario": {
+            "type": "string",
+            "minLength": 8
+          },
+          "success": {
+            "type": "string",
+            "minLength": 8
+          },
+          "states": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 2
+            }
+          }
+        }
+      }
+    },
+    "service_touchpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "task_id",
+          "visible",
+          "backstage",
+          "authority_ref",
+          "limitation"
+        ],
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "pattern": "^T[0-9]+$"
+          },
+          "visible": {
+            "type": "string",
+            "minLength": 4
+          },
+          "backstage": {
+            "type": "string",
+            "minLength": 4
+          },
+          "authority_ref": {
+            "type": "string",
+            "minLength": 4
+          },
+          "limitation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "creative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headline",
+        "outline",
+        "visual_roles",
+        "acceptance_tests"
+      ],
+      "properties": {
+        "headline": {
+          "type": "string",
+          "minLength": 5
+        },
+        "outline": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 3
+          }
+        },
+        "visual_roles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "scene_id",
+              "purpose"
+            ],
+            "properties": {
+              "scene_id": {
+                "type": "string",
+                "pattern": "^SC[0-9]+$"
+              },
+              "purpose": {
+                "type": "string",
+                "minLength": 3
+              }
+            }
+          }
+        },
+        "acceptance_tests": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 5
+          }
+        },
+        "forbidden_inherited_patterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "cta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "behavior",
+        "behavior_verified",
+        "side_effects"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "behavior": {
+          "enum": [
+            "read_only_preview",
+            "external_link",
+            "local_action",
+            "none"
+          ]
+        },
+        "behavior_verified": {
+          "type": "boolean"
+        },
+        "side_effects": {
+          "type": "string"
+        },
+        "authority_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "draft",
+            "approved",
+            "rejected",
+            "stale"
+          ]
+        },
+        "approved_by": {
+          "type": "string"
+        },
+        "approval_ref": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
