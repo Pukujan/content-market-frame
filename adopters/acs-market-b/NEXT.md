@@ -1,6 +1,6 @@
 # ACS B — next-session handoff (read this, not the chat)
 
-**State:** product-introduction marketing site **NOT generated or deployed**. **Owning issue:** [ABA #65](https://github.com/Pukujan/app-builder-automation/issues/65). **Workflow correction:** [ABA #67](https://github.com/Pukujan/app-builder-automation/issues/67) and [routing PR #68](https://github.com/Pukujan/app-builder-automation/pull/68).
+**State:** product-introduction marketing site **NOT generated or deployed**. **Owning issue:** [ABA #65](https://github.com/Pukujan/app-builder-automation/issues/65). **Workflow correction:** [ABA #67](https://github.com/Pukujan/app-builder-automation/issues/67) and [merged routing PR #68](https://github.com/Pukujan/app-builder-automation/pull/68) (verified on main).
 
 **Owner directions accepted:** individual multi-agent project builder (D3); intended attention returned to *real project work* (D6); product must be introduced immediately, then problem→mechanism→proof→technical detail (D7). Evidence is product-source-backed; no observed customer outcome or ROI claim.
 
