@@ -259,6 +259,20 @@
 
 ---
 
+## CORRECTION — ABA adopter generation vs internal Dyad/Pro runner (2026-10-08)
+
+**Observed source evidence overrides prior inference:** The **adopter-facing** ABA spec-to-app generator is `server/src/index.mjs generate` / `generate()` in `server/src/loop.mjs`. Its project-specific wrapper can adapt the data-access prompt contract without editing ABA. [design-bakery TASK-DB-0080](https://github.com/Pukujan/design-bakery/blob/main/tasks/TASK-DB-0080-ire-react-dashboard.md) reports a real ABA-generated React dashboard, 48 generator steps and 52 written files, merged and integrated by [PR #101](https://github.com/Pukujan/design-bakery/pull/101). Later design-bakery work deployed that output. This proves the adopter model has worked; it does not prove every future output is aesthetically accepted.
+
+**Distinct internal workstream:** ABA's `eval/run-dyad-pro.mjs` Pro-tool coverage (14 of 56) relates to its own staged full-Dyad implementation, not the success/failure of the existing adopter-facing generator. Earlier claims that **ACS B must wait for all 56 Pro tools** were an unjustified generalization.
+
+**Reversal, with history preserved:** Assistant-authored [ABA draft PR #66](https://github.com/Pukujan/app-builder-automation/pull/66), which proposed an explicit full-Dyad blocker for ACS B, was **closed unmerged**. [ABA issue #65 correction](https://github.com/Pukujan/app-builder-automation/issues/65#issuecomment-6073268979) directs the website task back to the working ABA adopter workflow. Do not use the misleading preflight as a requirement. The handmade [PR #64](https://github.com/Pukujan/app-builder-automation/pull/64) remains closed, non-authoritative design reference only.
+
+**Ownership and current unknowns:** ACS source owns product/coordination truth; PEF provides the market-framing design/spec; the consuming site workspace invokes ABA's adopter generator, with any project-specific prompt/data-contract adapter there. No ABA website-adopter code was located on ACS's default branch; a local scratch/worktree adapter may exist independently. This inspection used connected GitHub state, not the user's local machine. No new ACS B site generated or deployed in this correction.
+
+**Unchanged human decisions:** D3 intended individual builder, D6 intended qualitative attention-to-project-work benefit, D7 product-first introduction. Q3 CTA action remains unresolved, and proposed exact copy/layout is not automatically final-approved. These are content/experience decisions, not evidence of a broken generator.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
