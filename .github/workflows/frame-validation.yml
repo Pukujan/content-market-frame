@@ -34,11 +34,41 @@ jobs:
         run: |
           python -m json.tool router/router.v1.json > /dev/null
           python -m json.tool router/run.schema.json > /dev/null
+          python -m json.tool router/pef-questions.schema.json > /dev/null
+          python -m json.tool router/pef-experience.schema.json > /dev/null
+          python -m json.tool examples/acs-version-b.questions.json > /dev/null
           python -m json.tool examples/acs-version-b.run.json > /dev/null
       - name: Validate run against JSON Schema
         run: |
           python -m pip install 'jsonschema>=4.20,<5'
           python -c "import json; from jsonschema import Draft202012Validator; s=json.load(open('router/run.schema.json')); x=json.load(open('examples/acs-version-b.run.json')); Draft202012Validator.check_schema(s); Draft202012Validator(s).validate(x); print('Schema PASS')"
+      - name: Check PEF QA schema and draft packet
+        run: |
+          python - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator
+          for schema_path, example_path in [
+            ('router/pef-questions.schema.json', 'examples/acs-version-b.questions.json')
+          ]:
+            s = json.load(open(schema_path))
+            Draft202012Validator.check_schema(s)
+            Draft202012Validator(s).validate(json.load(open(example_path)))
+          s = json.load(open('router/pef-experience.schema.json'))
+          Draft202012Validator.check_schema(s)
+          print('PEF JSON schema PASS')
+          PY
+          python scripts/pef.py validate-qa examples/acs-version-b.run.json examples/acs-version-b.questions.json
+          python scripts/pef.py questions examples/acs-version-b.run.json examples/acs-version-b.questions.json > /tmp/pef-owner-review.json
+          python -m json.tool /tmp/pef-owner-review.json > /dev/null
+      - name: Assert drafts cannot compile ABA
+        run: |
+          python - <<'PY'
+          import json
+          q = json.load(open('/tmp/pef-owner-review.json'))
+          assert q['blocking_total'] == 3
+          assert len(q['questions']) == 3
+          print('Draft stays blocked; questions available')
+          PY
       - name: Validate draft ACS-B run record
         run: python scripts/frame.py validate examples/acs-version-b.run.json
       - name: Ensure context packet is bounded
