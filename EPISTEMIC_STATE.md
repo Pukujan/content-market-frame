@@ -177,6 +177,20 @@
 
 ---
 
+## PEF post-build semantic and experience QA — 2026-10-08
+
+**OWNER DIRECTION:** Implement post-generation QA that checks the rendered ABA output against the owner's approved product purpose, human problem, commercial story and UX/service plan, without mistaking a green build for experience acceptance.
+
+**IMPLEMENTED AS PRIVATE ABA DRAFT PR (NOT MERGED):** [ABA draft PR #61](https://github.com/Pukujan/app-builder-automation/pull/61) now links issue #62 as well as #60 and contains an opt-in postbuild inspector. The inspector uses a read-only local Chromium capture at desktop/mobile widths, records screenshots and hashes, checks visible locked headline/promise/CTA against approved PEF input, reports browser errors and attempted network writes, and produces an independent owner review queue for actual buyer comprehension, task/CTA outcomes, backstage service truth, and visuals. The report's automatic status cannot claim semantic acceptance or deployment authorization.
+
+**OPTIONAL AGENT REVIEW:** A separate fresh-context, text-only model critic can analyze a bounded excerpt of actual rendered body text against approved intent and storyboard. Its output is advisory and flags ungrounded model quotations. It does **not** inspect image pixels, prove observed customer behavior, click CTAs, or authorize release. It is opt-in because it makes an additional model request.
+
+**TEST EVIDENCE:** Dedicated ABA feature-branch GitHub Actions syntax, source hash-parity, offline negative-path tests and real Chromium synthetic-site fixture have passed on recent implementation commits. Tests are not evidence of a real ACS B build or actual owner/editor/customer acceptance. Latest docs/general CI and PCM project lifecycle remain pending.
+
+**NOT DONE:** No ACS A modification, no ACS B generated site, no live buyer research, no autonomous user interaction testing, no CGM changes, no ABA PR merge, no deployment. All actual user/market/design acceptance remains explicit owner/editorial authority. See the [PEF runbook](router/PEF_RUNBOOK.md) for the boundary.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
