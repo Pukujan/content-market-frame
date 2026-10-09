@@ -205,6 +205,20 @@
 
 ---
 
+## ACS B lead audience selected and draft Experience Brief — 2026-10-08
+
+**OWNER-APPROVED AUDIENCE ONLY:** Owner explicitly selected the **individual builder maintaining a long-running AI-assisted project** and the **repeated handoff/reorientation burden** as the market-facing ACS Version B's primary protagonist. [GitHub decision issue #1](https://github.com/Pukujan/content-market-frame/issues/1) preserves the public-safe instruction and approval scope. `D3` is accepted and `Q1` answered in the [run](examples/acs-version-b.run.json) / [owner QA](examples/acs-version-b.questions.json). This is owner-intended audience, not independently observed buyer research.
+
+**DRAFTED, NOT APPROVED:** [ACS B PEF Experience Brief](examples/acs-version-b.experience.draft.json) contains seven buyer-belief scenes, two conditional site tasks, matching service trace, source-grounded mechanism claims and creative/UX acceptance tests. Exact hero copy, benefit promise and CTA are *proposed*, with `review.status=draft` and `cta.behavior_verified=false`. All new scenes are draft; none of S3/S4/S5 is accepted. The [market-page frame](plans/ACS_VERSION_B_MARKET_PAGE_FRAME.md) describes the design rationale.
+
+**OPEN BLOCKING DECISIONS:** `Q2` should the lead benefit be **returning the builder's attention to project work** or narrower **project continuity**? `Q3` should the primary CTA be a **read-only informational walkthrough** or **a direct source-pinned setup instructions link**? Neither has been answered or inferred. The proposed read-only CTA cannot be called verified without an actual build and browser behavior review.
+
+**AUTOMATED QA BOUNDARY:** GitHub CI validates JSON schema and the evidence/decision record, checks only two open blocking questions remain, and specifically expects the draft brief to **fail** the ABA handoff gate. The bounded agent context packet must stay within 450 words. No ACS market site B, visuals, deployment or A/B comparison has been generated; Baseline A remains untouched and has not received independently verified live capture.
+
+**NEXT:** Present Q2/Q3 together as a short owner review, then adjust position and CTA/UX path, review the entire storyboard and Experience Brief separately, and only after explicit S3/S4/S5 approvals consider an isolated ABA generation.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
