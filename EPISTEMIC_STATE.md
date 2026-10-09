@@ -219,6 +219,16 @@
 
 ---
 
+## ACS B primary purpose: immediate product introduction — 2026-10-08
+
+**OWNER DIRECTION (accepted narrowly):** The market-facing website's primary purpose is to **introduce ACS briefly and relatably** to its intended individual builder, and explain what problem it addresses, how its integrated capabilities solve that problem, why the visitor should care, real proof, and technical evaluation depth. This supplements accepted **D3** (individual-builder lead) and **D6** (qualitative return-attention-to-project-work benefit). [Owner clarification and design distinction](https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072629118) is recorded as **D7** in the [run](examples/acs-version-b.run.json).
+
+**PROPOSED PAGE ORDER, not approved exact design:** Immediate *what/who/why* hero and representative product context → relatable work burden → solution and real mechanism → one scenario → claim-linked evidence and honest boundaries → technical detail on demand → a next step whose behavior remains **unknown pending Q3**. Market framing is the strategy behind the copy, not an explicit customer-facing “market framing” section; sales aims are integrated into clarity, trust and eventual action. The [market-page brief](plans/ACS_VERSION_B_MARKET_PAGE_FRAME.md) and [draft Experience Brief](examples/acs-version-b.experience.draft.json) now introduce ACS in the first scene rather than delaying product identity until the third.
+
+**REMAINING GATES:** Q3 owner clarification; exact wording, scene order and creative direction remain unapproved; ABA draft PR remains unmerged; no B generated, no deployment, and no baseline A mutation. No observed customer research or proof of quantified attention savings has been added.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
