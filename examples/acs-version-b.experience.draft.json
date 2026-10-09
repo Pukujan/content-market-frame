@@ -1,0 +1,187 @@
+{
+  "schema_version": "pef.experience.v1",
+  "run_id": "acs-version-b-framing-001",
+  "source_revision": "264117398e7754d7e91076481cd664b5e197c1d4",
+  "intent": {
+    "creator_purpose": "Present the integrated ACS hotload installation as a comprehensible local working arrangement for agents on an ongoing software project, without confusing the pack's value with a single component's scope.",
+    "user_need": "An individual builder wants to return to their actual project rather than repeatedly reconstructing agent context, ownership, review rules and handoffs between work sessions.",
+    "user_need_status": "owner_hypothesis",
+    "evidence_fact_ids": [
+      "F1",
+      "F2",
+      "F6"
+    ]
+  },
+  "audience": {
+    "actor": "Individual technical builder maintaining a real project with multiple AI agents across sessions",
+    "job": "Make progress on the project while keeping several AI agents aligned on responsibilities, prior decisions and safe handoffs",
+    "trigger": "Returning to a long-running repository or adding more agents after earlier sessions",
+    "workaround": "Rereading prior conversations, manually restating decisions and rules, assigning and checking ownership, and reconciling output"
+  },
+  "position": {
+    "decision_id": "D4",
+    "promise": "Give a long-running AI-assisted project a shared way of working so its builder can focus attention on making progress rather than continually rebuilding handoffs.",
+    "claim_ids": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "limitations": [
+      "Intended attention benefit, not independently measured time savings or demonstrated customer outcomes",
+      "Requires a compatible, configured repository and pinned component prerequisites; no guaranteed one-click installation",
+      "ACS owns coordination; PCM, OIO and CGM remain distinct source-owned components of the integrated installation",
+      "Not a hosted service, autonomous decision-maker or automatic recovery of every prior chat",
+      "This page's illustration or walkthrough would not itself install, mutate a repository or authorize agent operations"
+    ]
+  },
+  "buyer_journey": [
+    {
+      "scene_id": "SC1",
+      "belief_change": "Recognize that maintaining agent handoffs can become a second task that competes with project work",
+      "message": "You came to build something. The handoffs shouldn't become the main job."
+    },
+    {
+      "scene_id": "SC2",
+      "belief_change": "Recognize repeated context, ownership and acceptance work as one pattern worth addressing",
+      "message": "The rules and decisions need somewhere better to live than the last chat."
+    },
+    {
+      "scene_id": "SC3",
+      "belief_change": "Understand the integrated pack is local repository-level operating structure, not a hosted agent product",
+      "message": "One installable working surface, attached to the repository."
+    },
+    {
+      "scene_id": "SC4",
+      "belief_change": "Understand what coordination, continuity, issue provenance and readable content each contribute",
+      "message": "Distinct pieces; one explicitly versioned way of working together."
+    },
+    {
+      "scene_id": "SC5",
+      "belief_change": "Understand a real setup has prerequisites, verification and incomplete/partial states",
+      "message": "Inspect what gets wired, what is required and whether setup is complete."
+    },
+    {
+      "scene_id": "SC6",
+      "belief_change": "Know exactly what the software does not promise, increasing informed trust",
+      "message": "The pack establishes process and records; it does not replace human judgment or guarantee project outcomes."
+    },
+    {
+      "scene_id": "SC7",
+      "belief_change": "Know a safe next step and what that step is allowed to change",
+      "message": "Explore the installation safely before acting in your own repository."
+    }
+  ],
+  "ux_tasks": [
+    {
+      "id": "T1",
+      "scenario": "Visitor opens a proposed informational walkthrough of the installed working surface and inspects module responsibilities without touching their repository.",
+      "success": "Visitor can identify each source-owned module and correctly explain that the walkthrough does not execute an installer.",
+      "states": [
+        "default",
+        "walkthrough-open",
+        "module-detail-open",
+        "walkthrough-closed",
+        "read-only disclosure visible"
+      ]
+    },
+    {
+      "id": "T2",
+      "scenario": "Visitor follows a secondary link to source-pinned installation requirements for later local review.",
+      "success": "Link opens the public documented prerequisites without implying that a web click installed anything.",
+      "states": [
+        "default",
+        "linked-resource-navigation",
+        "broken-link fallback"
+      ]
+    }
+  ],
+  "service_touchpoints": [
+    {
+      "task_id": "T1",
+      "visible": "Conceptual read-only explanation of the repo-level ACS hotload pack; clearly tagged as not executing setup",
+      "backstage": "Intended client-side presentation only; no target repository, credential, issue mutation or installation subprocess",
+      "authority_ref": "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/modules/coordination/multi-agent-hotload/v0.1.0/README.md",
+      "limitation": "Candidate interaction; not implemented and not behaviorally verified. Must test passive network and write safety before acceptance."
+    },
+    {
+      "task_id": "T2",
+      "visible": "Explicit 'Read setup requirements' navigation to publicly documented source-owned installation prerequisites",
+      "backstage": "Ordinary browser link to a pinned GitHub documentation page; no repository mutation intended",
+      "authority_ref": "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/modules/coordination/multi-agent-hotload/v0.1.0/README.md",
+      "limitation": "Actual URL resolution and link semantics not yet browser verified."
+    }
+  ],
+  "creative": {
+    "headline": "Build with agents. Stop managing every handoff.",
+    "outline": [
+      "Recognition: builder losing attention to recurring coordination",
+      "The recurring extra job: reorientation, ownership, approval, explainability",
+      "Product reveal: a shared repository-level working surface",
+      "How it works: ACS / PCM / OIO / CGM, each with its real authority",
+      "The install experience: prerequisites, verify, READY/PARTIAL accurately distinguished",
+      "Boundaries: human control, real prerequisites, no fabricated metrics",
+      "Explore safely: read-only walkthrough or pinned requirements link"
+    ],
+    "visual_roles": [
+      {
+        "scene_id": "SC1",
+        "purpose": "Human and actual project are the center; agents are supporting context, not emotional protagonists"
+      },
+      {
+        "scene_id": "SC2",
+        "purpose": "Few sequential handoff snapshots in one project, without invented customer time savings or false live records"
+      },
+      {
+        "scene_id": "SC3",
+        "purpose": "Repo-centered install surface illustrating how an explicit versioned operating contract attaches to a project"
+      },
+      {
+        "scene_id": "SC4",
+        "purpose": "Four source-owned functions clearly labeled without claiming ACS wrote PCM, OIO or CGM"
+      },
+      {
+        "scene_id": "SC5",
+        "purpose": "Conceptual setup and verification states, visibly examples rather than fabricated real logs"
+      },
+      {
+        "scene_id": "SC6",
+        "purpose": "Plain-language limits legible in the normal page flow, not a scary compliance table"
+      },
+      {
+        "scene_id": "SC7",
+        "purpose": "A distinguishable no-write informational action and real-documentation alternative"
+      }
+    ],
+    "acceptance_tests": [
+      "First-time intended builder can paraphrase the human coordination burden and what ACS installs without coaching",
+      "Hero and page remain understandable without animation, sound or decorative media",
+      "Integrated pack scope is accurate: ACS coordination, PCM continuity/governance, OIO issues, CGM content guidance",
+      "No claimed measured savings, live customer story, autonomous decision making, universal installation or phantom approval",
+      "Every source-backed claim has pinned provenance; historical CGM requirements are not automatically current successor capabilities",
+      "All actions disclose their behavior; a read-only walkthrough never attempts repository or external write operations",
+      "Link and interaction states are tested on mobile and desktop; keyboard focus, semantics and reduced motion are reviewed",
+      "Real running ABA output preserves approved wording and story; semantic concerns return to PEF rather than being patched by CSS",
+      "Version A remains immutable; Version B is generated into an isolated candidate environment only after owner acceptance"
+    ],
+    "forbidden_inherited_patterns": [
+      "ACS represented as merely a PCM continuation or merely an agent assignment tool",
+      "Process/provenance tables or architecture jargon as primary human hero",
+      "Invented invoice morning or fabricated customer outcome with fake precision",
+      "First-screen giant feature matrix, glowing robot imagery, meaningless cartoon agent parade",
+      "Text baked into visuals before the words have been approved",
+      "Preview button falsely suggests real installation, live running tasks or existing repo changes",
+      "Unverified compatibility or ROI claims"
+    ]
+  },
+  "cta": {
+    "label": "Explore what gets installed",
+    "behavior": "read_only_preview",
+    "behavior_verified": false,
+    "side_effects": "Proposed: none; informational client-side walkthrough, not yet implemented or tested"
+  },
+  "review": {
+    "status": "draft",
+    "notes": "Only Q1 lead audience has been selected by the owner, recorded in CMF issue #1. Q2 benefit framing and Q3 actual CTA behavior remain blocking. Positioning D4 and D5, all buyer scenes, S3/S4/S5 creative gates, and rendered results are unapproved. This is not a build instruction."
+  }
+}
