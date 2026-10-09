@@ -21,7 +21,7 @@ class PefTests(unittest.TestCase):
                                   "Explain a user's needs and design a truthful experience")
         self.run["facts"] = [
             {"id": "F1", "statement": "A particular user task was observed",
-             "status": "observed", "source_refs": ["https://example.test/research"], "visibility": "public"},
+             "status": "observed", "source_refs": ["https://example.test/research"], "visibility": "public", "evidence_domain": "customer_research"},
             {"id": "F2", "statement": "The owner directs a specific problem focus",
              "status": "owner_direction", "source_refs": ["issue/test-only"], "visibility": "public"}
         ]
@@ -127,6 +127,10 @@ class PefTests(unittest.TestCase):
     def test_observed_user_need_cannot_be_owner_only(self):
         self.run["facts"][0]["status"] = "owner_direction"
         self.assertTrue(any("Observed user need" in e for e in pef.validate_experience(self.run, self.qa, self.brief)))
+
+    def test_technical_observation_not_user_research(self):
+        self.run["facts"][0]["evidence_domain"] = "product_mechanism"
+        self.assertTrue(any("customer_research" in e for e in pef.validate_experience(self.run, self.qa, self.brief)))
 
     def test_claim_must_be_verified(self):
         self.run["claims"][0]["status"] = "unverified"
