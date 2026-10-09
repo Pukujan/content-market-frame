@@ -15,7 +15,7 @@
         "F3"
       ],
       "affected_decision_ids": [
-        "D1"
+        "D3"
       ],
       "options": [
         {
@@ -48,7 +48,7 @@
         "F2"
       ],
       "affected_decision_ids": [
-        "D1"
+        "D4"
       ],
       "options": [
         {
@@ -80,7 +80,7 @@
         "F2"
       ],
       "affected_decision_ids": [
-        "D2"
+        "D5"
       ],
       "options": [
         {
@@ -89,7 +89,7 @@
         },
         {
           "id": "external",
-          "label": "Link to actual setup instructions, with no write action from the website"
+          "label": "Direct link to actual pinned setup instructions; no browser write"
         },
         {
           "id": "other",
