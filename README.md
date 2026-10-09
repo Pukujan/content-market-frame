@@ -46,6 +46,13 @@ To start a new product, use the init command in the [runbook](router/RUNBOOK.md)
 
 - **[PEF intent-aware experience router proposal](design/PEF_HUMAN_IN_LOOP_EXPERIENCE_ROUTER.md)** — source-driven discovery; targeted owner QA only for consequential ambiguity; buyer-belief, task UX and service blueprints; approved low-fi direction and gated handoff to ABA; independent review. **Design only, not yet implemented.**
 
+## ACS market page — B framing now in progress
+
+- **[Version B market-page framing draft](plans/ACS_VERSION_B_MARKET_PAGE_FRAME.md)** — source-pinned ACS truth, alternate positions, recommended seven-scene human-first narrative, candidate hero, UX/service trace, safe CTA options and targeted owner decisions.
+- **[B run record](examples/acs-version-b.run.json)** — source revision frozen; gate status still review/draft, not accepted.
+- **[B owner-QA questions](examples/acs-version-b.questions.json)** — the three consequential choices to resolve before an approved Experience Brief and isolated ABA build.
+- **Baseline A visual capture still pending:** the live page could not be independently retrieved through the available tools. No pixel-level A/B comparison or deployment is claimed.
+
 ## ACS A → B is planned, not underway
 
 | Artifact | Meaning |
