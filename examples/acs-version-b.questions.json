@@ -4,7 +4,7 @@
   "questions": [
     {
       "id": "Q1",
-      "status": "open",
+      "status": "answered",
       "impact": "high",
       "blocking": true,
       "question": "Which intended visitor's problem should Version B lead with?",
@@ -33,7 +33,13 @@
           "label": "Neither; I will correct the lead user and problem"
         }
       ],
-      "recommended_option_id": "individual"
+      "recommended_option_id": "individual",
+      "answer": {
+        "choice_id": "individual",
+        "answered_by": "project owner (direct audience selection)",
+        "answer_ref": "https://github.com/Pukujan/content-market-frame/issues/1",
+        "note": "Lead with a long-project independent builder repeatedly reconstructing context and managing agent handoffs; team operator may remain a secondary use case."
+      }
     },
     {
       "id": "Q2",
