@@ -151,6 +151,18 @@
 
 ---
 
+## PEF runnable first slice — 2026-10-08
+
+**OWNER DIRECTION / implementation authorized:** Proceed from the human-in-loop experience framing proposal into a repeatable workflow. Do not interpret this as an instruction to modify production ACS site or deploy Version B.
+
+**IMPLEMENTED IN CONTENT-MARKET-FRAME:** `scripts/pef.py` generates small ranked owner QA packets from explicit uncertainty items, checks evidence/decision/reviewer provenance structurally, rejects unresolved blocking decisions, and compiles an approved source-pinned Experience Brief into a deterministic Markdown spec for ABA with SHA-256 manifest. See [PEF runbook](router/PEF_RUNBOOK.md), [QA schema](router/pef-questions.schema.json), [Experience schema](router/pef-experience.schema.json), [test suite](tests/test_pef.py) and [ACS-B open QA example](examples/acs-version-b.questions.json). PEF's upstream router now points frontend implementation to ABA, not CGM `html-demo`.
+
+**QUALITY BOUNDARIES:** The checks are structural and fail-closed, not actual user research or runtime verification of the referenced claims. `evidence_domain=customer_research` is required for a need labelled observed, but can still be misclassified by an agent; source human review matters. Recorded owner answer/approval references can be misrepresented and must be verified. No code in this repository invokes an LLM, opens an ABA runner or accepts a builder blueprint on behalf of the owner.
+
+**NOT YET IMPLEMENTED:** CGM module registration/integration, automated research and design agent runtime, browser form UI, actual ABA runner adapter and blueprint semantic-parity gate, generated ACS B website, live user research or deployment. The current ACS-B Q1–Q3 remain open and high-impact; no real owner answers or S3–S5 acceptance were invented. Version A remains unchanged.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
