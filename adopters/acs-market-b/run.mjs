@@ -12,7 +12,7 @@ const HERE=dirname(fileURLToPath(import.meta.url));
 export const SITE_DATA_ACCESS=[
   "# ACS market site data contract — static product introduction",
   "- This is a static informational website, NOT a personal-brand analytics dashboard.",
-  "- No local SQLite, GET /api/views, authenticated API, agent runtime or installation endpoint is available.",
+  "- No SQLite datastore, analytics-view endpoint, authenticated API, agent runtime or installation endpoint is available.",
   "- All product claims must trace to pinned source links in the spec. Do not invent data, customer metrics, testimonials or installation receipts.",
   "- The primary action is unresolved; do not generate an installer or a CTA button. Source-documentation anchors are evidence links only.",
   "- There is no backend or write side effect. Do not simulate a working installer."
