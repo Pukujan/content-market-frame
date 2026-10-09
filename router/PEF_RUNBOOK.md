@@ -134,6 +134,12 @@ The compiler:
 
 This is a **structural and recorded-approval gate**, not cryptographic verification of human identity, marketing desirability or actual network behavior. A malicious agent can still invent a reference; the operator must verify the cited source and reviewer action. Real external user studies cannot be replaced by static schema checks.
 
+## ABA integration status — separate repo, review pending
+
+A draft, opt-in adapter is proposed for the dedicated App Builder Automation repository in **its issue #60 and draft PR #61**. It validates PEF input/manifest/source approvals before work, runs a plan-only phase, saves a plan/blueprint digest, requires a recorded human approval of the exact plan, and only then resumes the same workspace for implementation. The normal unattended ABA path remains available for non-PEF work; compiled PEF input is rejected on that legacy path.
+
+**Verification:** the dedicated PEF offline GitHub Actions job on the ABA branch passed its syntax, Python/Node digest-parity and negative-gate checks. This is a **branch proposal**, not a merged/released module or a live end-to-end product test. The general ABA CI/merge gate and PCM issue/checkpoint reconciliation remain separate. Do not claim ABA currently runs this flow on its default branch, and do not use it to build ACS B without accepted human framing decisions.
+
 ## 5. ABA handoff and verification — boundary remains manual
 
 The current ABA runner accepts its own specification/prompt and implements a plan/blueprint/build loop. This repo does **not** yet call that runner or enforce agreement between the internal ABA blueprint and the approved PEF brief.
