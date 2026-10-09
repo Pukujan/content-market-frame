@@ -6,6 +6,7 @@ This repository is the **working lab for product understanding, marketing framin
 
 1. [README.md](README.md): purpose, the runnable router, and boundary between this repo and CGM.
 2. [router/router.v1.json](router/router.v1.json): load the active stage's instructions and named dependencies, not an entire brainstorm archive.
+   When the task concerns product/market/UX experience framing, also read [router/PEF_RUNBOOK.md](router/PEF_RUNBOOK.md) and load only the relevant PEF record/schema (not both full documentation sets).
 3. [router/CONTEXT_PROTOCOL.md](router/CONTEXT_PROTOCOL.md) and [router/RUNBOOK.md](router/RUNBOOK.md): handoff packet budget, stage transitions, privacy and invalidations.
 4. The relevant run record, for ACS-B [examples/acs-version-b.run.json](examples/acs-version-b.run.json). It remains DRAFT and does **not** authorize generation.
 5. If source/market/creative review requires deeper material, use the specific targeted references below—not every file upfront.
