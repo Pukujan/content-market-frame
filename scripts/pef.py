@@ -181,10 +181,10 @@ def validate_experience(run: dict, qa: dict, brief: dict) -> list[str]:
     if brief.get("intent", {}).get("user_need_status") == "observed_user_research":
         ids = brief["intent"].get("evidence_fact_ids", [])
         if not ids or not any(
-            facts[fid]["status"] == "observed" and facts[fid].get("source_refs")
+            facts[fid]["status"] == "observed" and facts[fid].get("source_refs") and facts[fid].get("evidence_domain") == "customer_research"
             for fid in ids if fid in facts
         ):
-            errors.append("Observed user need requires observed evidence; owner direction does not qualify")
+            errors.append("Observed user need requires observed customer_research evidence; owner direction or a technical fact does not qualify")
     for cid in position.get("claim_ids", []):
         c = claims.get(cid)
         if not c or c.get("status") != "verified" or not c.get("source_refs"):
