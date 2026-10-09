@@ -1,22 +1,25 @@
 # Content Market Frame
 
+**Current ACS B execution:** Read **[the short ACS B next-session handoff](adopters/acs-market-b/NEXT.md)**, then [the actual consumer specification](adopters/acs-market-b/SPEC.md), and [ABA owning issue #65](https://github.com/Pukujan/app-builder-automation/issues/65). **Do not load this entire repository history into agent context.** The executable [consumer adapter](adopters/acs-market-b/run.mjs) uses ABA's working `server/src/loop.mjs generate()` route, NOT the internal Dyad/Pro runner. ABA routing confusion is tracked in [issue #67](https://github.com/Pukujan/app-builder-automation/issues/67) / [fix PR #68](https://github.com/Pukujan/app-builder-automation/pull/68).
+
+
 **A reusable, context-efficient router for turning what a repository really does into a human-recognizable problem, credible market position, visual story, and honest product experience.**
 
 This repository exists because a technically competent agent can still sell the wrong problem. Our ACS case required repeated corrections—from a fabricated coordination vignette to PCM-only continuity to a research-heavy audit-page voice—before the real human-centered sales direction emerged. **The valuable artifact is the decision process, not merely the generated site.**
 
-**Status:** v0.1 implementation of the router and structural validation, **not** a proven cross-repository standard. The current ACS site is a substantial but not final positive baseline according to its owner. No Version B site has been generated or authorized by this repo.
+**Status:** v0.1 implementation of the router and structural validation, **not** a proven cross-repository standard. The former ACS market-facing site was rejected and recorded as taken offline in ABA issue #50; do not assume it is live or a visual baseline. **No ABA-generated ACS B website has been produced yet.**
 
 ## Product & Experience Framing — runnable PEF slice
 
 **[PEF agent skill](modules/product-experience-framing/SKILL.md)** is the narrow, purpose-routed module entry point (incubating here, not registered in CGM). **[PEF runbook](router/PEF_RUNBOOK.md)** describes the now implemented conditional owner-QA packet, [QA schema](router/pef-questions.schema.json), [Experience Brief schema](router/pef-experience.schema.json), and [fail-closed ABA input compiler](scripts/pef.py). The generator outputs a **source-locked build specification, not a running site**. No CGM/ABA source changes or ACS-B generation are implied.
 
-Try the **unanswered** ACS-B review packet without making any design decision:
+Inspect the **remaining open Q3 CTA question** without inventing a decision:
 
 ~~~bash
 python scripts/pef.py questions examples/acs-version-b.run.json examples/acs-version-b.questions.json
 ~~~
 
-Compilation requires approved S3/S4/S5 decisions and a verified CTA; current ACS B remains blocked. The actual ABA runner, imagery and deployment are separate, explicitly authorized actions.
+Compilation requires approved S3/S4/S5 decisions and a verified CTA; current ACS B remains blocked. That PEF compiler is an experimental internal handoff and is **not a prerequisite** for ABA's already working consumer generator. A separate consuming-site adapter and spec are available above. Imagery review and deployment require their own acceptance.
 
 ## Start with the router
 
