@@ -40,8 +40,8 @@
   "buyer_journey": [
     {
       "scene_id": "SC1",
-      "belief_change": "Recognize that recurring agent handoffs demand attention which the builder intended to spend on the real project",
-      "message": "You started this project to build something, not to spend every session rebuilding how the agents work together."
+      "belief_change": "Within the first screen, identify ACS's repo-installed integrated agent working arrangement, its intended individual-builder audience and relevance to reducing repeated handoff management.",
+      "message": "ACS installs shared working rules for AI agents into a project repository. Keep attention on the real project instead of repeatedly rebuilding handoffs."
     },
     {
       "scene_id": "SC2",
@@ -50,8 +50,8 @@
     },
     {
       "scene_id": "SC3",
-      "belief_change": "Understand the integrated pack is local repository-level operating structure, not a hosted agent product",
-      "message": "One installable working surface, attached to the repository."
+      "belief_change": "Understand the underlying repo-level mechanism and versioned component boundaries behind the already-introduced ACS product.",
+      "message": "Inside the repository: explicit coordination, durable continuity, issue history and useful content guidance, with separate ownership."
     },
     {
       "scene_id": "SC4",
@@ -65,8 +65,8 @@
     },
     {
       "scene_id": "SC6",
-      "belief_change": "Know exactly what the software does not promise, increasing informed trust",
-      "message": "The pack establishes process and records; it does not replace human judgment or guarantee project outcomes."
+      "belief_change": "Know how source-backed mechanisms, missing independent user-outcome evidence, setup prerequisites and true limitations affect evaluation.",
+      "message": "Inspect the mechanisms and prerequisites; outcomes and compatibility should not be claimed beyond demonstrated evidence."
     },
     {
       "scene_id": "SC7",
@@ -91,18 +91,18 @@
   "creative": {
     "headline": "Build with agents. Stop managing every handoff.",
     "outline": [
-      "Recognition: builder losing attention to recurring coordination",
-      "The recurring extra job: reorientation, ownership, approval, explainability",
-      "Product reveal: a shared repository-level working surface",
-      "How it works: ACS / PCM / OIO / CGM, each with its real authority",
-      "The install experience: prerequisites, verify, READY/PARTIAL accurately distinguished",
-      "Boundaries: human control, real prerequisites, no fabricated metrics",
-      "Next action: explicit design placeholder only; primary CTA purpose and behavior awaiting owner Q3"
+      "First screen: immediately name ACS and the repository-installed product category, the individual builder, the qualitative attention-to-work benefit, and a representative product-context visual",
+      "Relatable human situation: repeated agent handoffs and reorientation take attention from the real project",
+      "Solution in context: connect that specific friction to repo-level working rules rather than vague productivity claims",
+      "Representative scenario: how a project resumes with coordination, continuity, issues and content guidance playing distinct roles",
+      "Evidence and evaluation: source-grounded mechanism checks, evidence limitations and useful installation prerequisites",
+      "Technical depth on demand: component ownership, setup contracts, dependencies, READY/PARTIAL caveats and source-linked docs",
+      "Next action: hold CTA purpose, label, destination and permissions undecided until owner Q3 clarification"
     ],
     "visual_roles": [
       {
         "scene_id": "SC1",
-        "purpose": "Human and actual project are the center; agents are supporting context, not emotional protagonists"
+        "purpose": "Introduce the actual repository-installed product alongside a recognizable individual-builder project, with an immediate product-identification cue and human benefit; avoid abstract problem-only art"
       },
       {
         "scene_id": "SC2",
@@ -110,7 +110,7 @@
       },
       {
         "scene_id": "SC3",
-        "purpose": "Repo-centered install surface illustrating how an explicit versioned operating contract attaches to a project"
+        "purpose": "Deepen the real repo-installed mechanism already named in the first screen, using an inspectable product-context diagram rather than belated product reveal"
       },
       {
         "scene_id": "SC4",
@@ -122,7 +122,7 @@
       },
       {
         "scene_id": "SC6",
-        "purpose": "Plain-language limits legible in the normal page flow, not a scary compliance table"
+        "purpose": "Attach credible proof and boundaries to concrete statements; let interested developers explore technical sources without putting audits in the hero"
       },
       {
         "scene_id": "SC7",
@@ -130,6 +130,7 @@
       }
     ],
     "acceptance_tests": [
+      "A first-time reader can identify WHAT ACS is, WHO it is for and WHY it matters from the first screen without first scrolling through a problem essay",
       "First-time intended builder can paraphrase the human coordination burden and what ACS installs without coaching",
       "Hero and page remain understandable without animation, sound or decorative media",
       "Integrated pack scope is accurate: ACS coordination, PCM continuity/governance, OIO issues, CGM content guidance",
@@ -160,6 +161,6 @@
   },
   "review": {
     "status": "draft",
-    "notes": "Owner accepted Q1 (individual builder, D3) and Q2 benefit direction (return attention to real project work, D6); refs CMF issue #1 and its latest comment. Q3 was specifically marked NEEDS CORRECTION, not answered. Positioning D4/headline, CTA D5, all scenes, S3/S4/S5 creative gates, ABA generation and deployment remain unapproved. Scene 7 and CTA/tasks/services must be revisited after explicit Q3 response."
+    "notes": "Owner accepted Q1 (individual builder, D3) and Q2 benefit direction (return attention to real project work, D6); refs CMF issue #1 and its latest comment. Q3 was specifically marked NEEDS CORRECTION, not answered. Positioning D4/headline, CTA D5, all scenes, S3/S4/S5 creative gates, ABA generation and deployment remain unapproved. Scene 7 and CTA/tasks/services must be revisited after explicit Q3 response. Owner additionally clarified the homepage's primary purpose as a short, relatable product introduction (D7); proposed product-first section order remains unapproved design guidance. Product category and intended benefit must be visible immediately."
   }
 }
