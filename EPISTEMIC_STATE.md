@@ -229,6 +229,20 @@
 
 ---
 
+## ACS B visual review prototype (2026-10-08)
+
+**OWNER DIRECTION:** Proceed with an actual product-first market page candidate, while retaining the accepted individual-builder audience, qualitative return-attention benefit, truthful source backing, and no invented primary CTA.
+
+**IMPLEMENTED AS DESIGN STUDY, NOT PRODUCTION:** [ABA issue #63](https://github.com/Pukujan/app-builder-automation/issues/63) and [draft PR #64](https://github.com/Pukujan/app-builder-automation/pull/64) contain a self-contained, responsive **static design reference** under `experiments/acs-market-b-product-first/index.html`. The first screen names ACS and what it is; visual diagram and scenarios cover four separately owned modules, project handoffs, source-backed evidence and technical limits. Preview screenshots/source are also attached to the initiating conversation. It is not a Dyad/ABA model-generated release, not merged and not deployed.
+
+**LOCAL TEST OBSERVATIONS:** Rendered using Chromium at widths 320/390/768/1440: no horizontal overflow, one product H1, no JS page errors, native FAQ interaction works, three pinned evidence links, no primary CTA/form and no external scripts. Branch CI/browser artifact checks are separate from these local results. No actual user comprehension study or comparison with a verified Baseline A was run.
+
+**BOUNDARIES:** The candidate hero is “A shared way of working for AI agents in your repository”; exact copy and strategy still proposed. Q3 owner action remains unresolved, as do S3/S4/S5 approvals and actual PEF→ABA full design-surface generation. Historical ABA issue #50 documents a rejected previous public ACS page being taken offline; live Baseline A was not independently retrieved and its current accessibility should not be assumed. No production sites, DNS, installers or the ACS source repository were modified.
+
+**NEXT:** Obtain owner visual/semantic critique, clarify the real next action, lock the corrected creative brief with explicit authorization, then invoke the gated actual ABA pipeline and rendered QA, separately from deployment.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
