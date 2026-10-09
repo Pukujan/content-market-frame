@@ -1,5 +1,15 @@
 # Epistemic State — living, not a victory report
 
+## CURRENT ENTRYPOINT — read this instead of the historical sections
+
+For the **active ACS B website task**, the compact authority is **[adopters/acs-market-b/NEXT.md](adopters/acs-market-b/NEXT.md)**, the [source-pinned consumer spec](adopters/acs-market-b/SPEC.md) and [ABA owning issue #65](https://github.com/Pukujan/app-builder-automation/issues/65). They supersede stale builder-routing and interim website-status paragraphs farther down this chronological file. A fresh agent should **not load the rest of this history by default**.
+
+**Owner corrections preserved in executable task state:** ABA **adopter generation** is the existing `server/src/loop.mjs generate()` path (IRE production precedent); ABA's separate **internal Dyad/Pro** development and its 14/56 coverage are not an ACS B prerequisite. ABA routing defect [issue #67](https://github.com/Pukujan/app-builder-automation/issues/67), [draft fix PR #68](https://github.com/Pukujan/app-builder-automation/pull/68). Misrouted [PR #66](https://github.com/Pukujan/app-builder-automation/pull/66) and manually authored [PR #64](https://github.com/Pukujan/app-builder-automation/pull/64) are closed unmerged.
+
+**Current fact:** accepted audience D3 / qualitative benefit D6 / product introduction D7; **Q3 actual primary CTA remains unselected**; no verified live ACS B React generation, rendered buyer acceptance, or deployment. The new [consumer adapter](adopters/acs-market-b/run.mjs) and its CI are **handoff capability**, not a claimed site. The correct next action is an isolated genuine ABA consumer generator execution where the existing owner-configured provider runs, then actual browser/art-direction review. Treat older contradictory “full Dyad first” wording below as explicitly **REJECTED/SUPERSEDED**.
+
+---
+
 **As of:** 2026-10-08  
 **State:** initial investigation; no final owner approval of this framework or its sample copy  
 **Public-safe policy:** case observations are abstracted from an owner-provided private session. Product claims link to public repository documents. This file does not reproduce the private transcript.
