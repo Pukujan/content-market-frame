@@ -39,3 +39,12 @@ test("consumer task describes source-first product, real generator and no fake b
   assert.match(spec,/React\/Vite/);
   assert.doesNotMatch(spec,/--require-full-dyad/);
 });
+
+test("ACS B next-session context stays within a tight 350-word budget",()=>{
+  const handoff=readFileSync(join(here,"NEXT.md"),"utf8");
+  const words=handoff.trim().split(/\\s+/).length;
+  assert.ok(words<=350,"hot handoff grew beyond 350 words: "+words);
+  assert.match(handoff,/ABA #65/);
+  assert.match(handoff,/generate\(\)/);
+  assert.match(handoff,/Q3/);
+});
