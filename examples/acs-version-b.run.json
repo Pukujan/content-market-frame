@@ -393,31 +393,21 @@
     }
   ],
   "handoff": {
-    "summary": "Owner approved Q1 individual-builder audience (D3), Q2 qualitative return-attention benefit (D6), and product-introduction site objective (D7). Exact copy, IA/sections, Q3 CTA, S3–S5 creative approvals and ABA remain unapproved. Draft first scene now names ACS immediately.",
+    "summary": "ACS B is a product-introduction website for the individual builder. Lead benefit: return attention to real project work. Hero must identify ACS immediately. Full sourced decisions, claims and scenes remain in run; no creative acceptance.",
     "fact_ids": [
       "F1",
-      "F2",
-      "F3",
-      "F5",
-      "F6",
-      "F7",
       "F8"
     ],
     "decision_ids": [
-      "D1",
-      "D2",
       "D3",
-      "D4",
-      "D5",
       "D6",
       "D7"
     ],
     "open_questions": [
-      "Q3 only: what outcome should the primary website action deliver when clicked, and what real behavior or effects should occur?",
-      "Exact hero wording, storyboard and Experience Brief need separate editorial acceptance.",
-      "Baseline A still has no independent captured visual/browser record."
+      "Q3: What must the primary website action do when clicked? No action approved.",
+      "Exact headline and storyboard need independent owner signoff."
     ],
-    "next_action": "Propose immediate product-first hero and problem→solution→proof→evaluation page hierarchy for creative review. Q3 still needs its actual click purpose clarified separately; no ABA or deployment."
+    "next_action": "Clarify Q3; then review B creative brief. Do not generate B or alter A."
   },
   "history": [
     {
@@ -452,6 +442,11 @@
       "action": "owner_clarified_product_introduction_objective",
       "detail": "Accepted D7 that Version B introduces the product immediately and relatably; recommended IA remains draft. Shifted proposed SC1 to name ACS before deep problem narrative. Q3 CTA still unselected.",
       "ref": "https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072629118"
+    },
+    {
+      "at": "2026-10-08",
+      "action": "context_packet_refined",
+      "detail": "Hot handoff references only product ownership F1, site objective F8 and accepted owner choices D3/D6/D7. Full source/decision/scene history remains in the archival run. Unapproved CTA stays explicit open Q3."
     }
   ],
   "comparison": {
