@@ -336,7 +336,7 @@
     }
   ],
   "handoff": {
-    "summary": "Owner approved individual-builder audience (D3/Q1). PEF Experience Brief has seven proposed belief scenes, bounded product claims and conditional read-only UX/service map. Q2 benefit frame and Q3 CTA behavior remain blocking; no S3/S4/S5 acceptance or ABA build authorization.",
+    "summary": "Owner selected individual builder (Q1/D3). Seven B scenes and mechanism claims drafted. Q2 benefit and Q3 CTA remain open. No storyboard, creative or build approval. Baseline A untouched.",
     "fact_ids": [
       "F1",
       "F2",
@@ -352,11 +352,11 @@
       "D5"
     ],
     "open_questions": [
-      "Q2: Should the lead promise be returning attention to meaningful project work, or specifically continuity across sessions? This is a direction, not measured efficacy.",
-      "Q3: Should the primary site action be a read-only walkthrough or a direct link to pinned setup instructions?",
-      "Can Baseline A visible design/copy/behavior be captured at a verifiable immutable reference before comparison?"
+      "Q2: Lead benefit—more attention for real project work, or continuity across sessions?",
+      "Q3: Primary CTA—read-only walkthrough or linked setup instructions?",
+      "Baseline A screenshot/behavior capture remains unavailable."
     ],
-    "next_action": "Owner selects/corrects Q2 promised benefit and Q3 primary CTA. Then reassess positioning/story/creative acceptance and test actual preview/link behavior before compiling or building."
+    "next_action": "Resolve Q2/Q3; review framing and Experience Brief before any ABA build."
   },
   "history": [
     {
