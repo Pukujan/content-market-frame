@@ -6,6 +6,24 @@
 **Baseline A:** https://acs.design-bakery.com/ — owner-favored but not final; live visual/browser capture **not independently obtained**, so no pixel/section comparison with A is asserted.
 **Version B:** isolated design/candidate, not a replacement for A until approved and evaluated.
 
+## Owner clarification — product introduction comes first
+
+**APPROVED PURPOSE, not approved copy/order:** The owner clarified that Version B primarily **introduces ACS quickly**. It should give a visitor a short product explanation and recognizable human situation, then connect problem, market meaning, product solution, commercial relevance, defensible evidence and technical depth. See [owner decision record](https://github.com/Pukujan/content-market-frame/issues/1#issuecomment-6072629118).
+
+**Recommended information hierarchy (PROPOSED):**
+
+1. **First screen:** Product name, category, individual-builder audience and intended benefit, plus a representative working-surface example. Give an immediate *what is it / who is it for / why care* answer, not only a clever pain-point slogan.
+2. **Relatable problem:** A succinct account of the coordination burden; avoid an extended essay that delays introducing ACS.
+3. **Solution:** Connect the product's distinct mechanisms to the human job. Clearly attribute ACS coordination, PCM continuity/governance, OIO issue recording and CGM content guidance.
+4. **Representative experience:** One believable scenario of a real project across sessions, grounded in product mechanics. Do not fabricate installed runtime screenshots or customer testimonials.
+5. **Proof as encountered:** Evidence beside each significant claim. The documented mechanism is source evidence, **not independent evidence of buyer need or measured productivity**. No fake research backing.
+6. **Evaluate and go deeper:** Installation prerequisites, compatibility, PARTIAL/READY behavior, limits, and access to technical contracts; use progressive disclosure, not a wall of implementation text.
+7. **Next action:** CTA's exact intent, wording and click effect remain **Q3 unresolved**. Do not invent a preview, setup link or live install.
+
+**Important categories that are mainly backstage:** “market framing” guides who/why/alternatives and the entire sequence; it is not a section titled Market Framing. “Sales opportunity” is the eventual conversion intention supported by clear value/proof, not an overt standalone hard-sell paragraph. “Research backing” is a truthful evidence standard; show only real user studies when they exist. Technical reference depth belongs in appropriate drilldowns, while essential constraints appear before any consequential user action.
+
+**External UX references:** [NN/g homepage design principles (2024)](https://www.nngroup.com/articles/homepage-design-principles/), [NN/g progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/), [GOV.UK writing for interfaces](https://www.gov.uk/service-manual/design/writing-for-user-interfaces). This is recommended practice tailored to ACS, **not** an immutable sequence approved by the owner or independent ACS buyer-comprehension evidence.
+
 ## Product facts, not marketing invention
 
 - ACS itself owns **multi-agent execution coordination**: live join-order roles, boss lease and FIFO failover, task claim queue, agent-less watchdog, and proposal → acceptance → PR discipline.
@@ -38,7 +56,7 @@
 
 > **Build with agents. Stop managing every handoff.**
 >
-> When several AI agents work on a long-running project, someone still has to keep their roles, task ownership, project history, approvals, and output aligned. ACS installs a shared way of working into the repository, combining coordination with pinned continuity, issue records, and content guidance.
+> ACS is a repository-installed working arrangement for AI agents. It connects coordination with pinned continuity, issue records and content guidance so the builder can spend more attention on the actual project instead of continually rebuilding handoffs. The intended attention benefit is not a measured outcome.
 >
 > **Primary action candidate:** Explore what gets installed (a read-only product explanation; actual click behavior to be verified).
 >
@@ -50,13 +68,13 @@ Copy is intentionally qualitative: it does **not** assert measured time saved, p
 
 | Scene | Visitor's question | What B must establish | Visual/UX job |
 | --- | --- | --- | --- |
-| **B01 — Recognition** | “Is this the problem I face?” | The real burden is keeping multi-agent work together, not a lack of generated code | Strong typographic opening; actual human project in frame, no imaginary customer case |
+| **B01 — Product introduction + recognition** | “What is ACS, and why might it matter to me?” | Immediately identify the repo-installed product, individual builder and qualitative benefit | First screen pairs real product category with relatable work; do not wait until B03 to reveal the product |
 | **B02 — The recurring extra job** | “What exactly is painful?” | Context reconstruction, role collisions, issue provenance, review and readable outcomes compete with making progress | One continuous project journey, 3 grouped moments; avoid an overwhelming 7-feature matrix |
-| **B03 — Product reveal** | “What would I be getting?” | A repo-installed working surface, not a hosted omniscient agent | Simple repo-centered before/after diagram, clearly conceptual if no actual screenshot |
+| **B03 — Mechanism explained** | “How does this work in my repository?” | Expand on the already named repo-installed arrangement, not a first product reveal | Source-linked repo-centered mechanism diagram, visibly conceptual if not a verified screenshot |
 | **B04 — Four linked capabilities** | “How is this more than a coordinator?” | ACS role/claim/proposals + PCM continuity/governance + OIO issue/provenance + CGM content/visual rules | Four connected functions expressed as outcomes and properly attributed; optional inspect mechanics |
 | **B05 — A credible workflow** | “What happens when I start?” | Preconditions → install/configure → inspect READY or PARTIAL → continue working | Experience/task flow grounded in source; no pretending a no-write illustration performs installation |
-| **B06 — Boundaries build trust** | “What should I not assume?” | What remains manual, source-owned, conditional or unsupported | Plain-language FAQ and source links; no audit table in the hero |
-| **B07 — Low-risk next step** | “Can I understand this before adopting it?” | Read-only tour or verified source documentation before real local install | CTA must be an actual tested control with an accurate side-effect contract |
+| **B06 — Proof and boundaries** | “Why should I believe this?” | Explain source-backed mechanisms versus unvalidated buyer outcomes, plus prerequisites and human limits | Place evidence beside relevant claims, link deeper technical sources, no hero audit table |
+| **B07 — Next action unresolved** | “What should I do next?” | Its exact purpose and real behavior must follow the owner's Q3 clarification | Leave CTA purpose, UI, destination and side effects as unapproved; do not silently add a tour or install link |
 
 ### Visual style proposed for B
 
