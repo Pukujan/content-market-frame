@@ -50,7 +50,8 @@ To start a new product, use the init command in the [runbook](router/RUNBOOK.md)
 
 - **[Version B market-page framing draft](plans/ACS_VERSION_B_MARKET_PAGE_FRAME.md)** — source-pinned ACS truth, alternate positions, recommended seven-scene human-first narrative, candidate hero, UX/service trace, safe CTA options and targeted owner decisions.
 - **[B run record](examples/acs-version-b.run.json)** — source revision frozen; gate status still review/draft, not accepted.
-- **[B owner-QA questions](examples/acs-version-b.questions.json)** — the three consequential choices to resolve before an approved Experience Brief and isolated ABA build.
+- **[B owner-QA questions](examples/acs-version-b.questions.json)** — **Q1 selected by owner**, Q2 promise and Q3 CTA still open; see [decision issue #1](https://github.com/Pukujan/content-market-frame/issues/1).
+- **[Draft Experience Brief](examples/acs-version-b.experience.draft.json)** — seven buyer scenes, tasks, service trace and claim/UX safety checks; `review.status=draft`, CTA unverified, **not eligible for ABA generation**.
 - **Baseline A visual capture still pending:** the live page could not be independently retrieved through the available tools. No pixel-level A/B comparison or deployment is claimed.
 
 ## ACS A → B is planned, not underway
