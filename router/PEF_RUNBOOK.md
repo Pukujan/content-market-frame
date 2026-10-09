@@ -134,6 +134,14 @@ The compiler:
 
 This is a **structural and recorded-approval gate**, not cryptographic verification of human identity, marketing desirability or actual network behavior. A malicious agent can still invent a reference; the operator must verify the cited source and reviewer action. Real external user studies cannot be replaced by static schema checks.
 
+## Rendered post-build QA — draft ABA integration
+
+The dedicated app-builder implementation has been extended in **ABA issue #62 / draft PR #61** with PEF-only post-build experience checks. Its read-only local Chromium verifier captures actual pixels/DOM at desktop and mobile sizes, checks preserved locked headline/promise/CTA and browser crashes, notes accessibility/responsive concerns, and hashes the screenshot/report artifacts. It blocks mechanical failures and leaves **semantic_acceptance: not_established** and **release_authorized: false** even when those checks pass.
+
+An optional **fresh-context text-only critic** compares a bounded rendered-text excerpt to approved human problem and buyer-belief scenes, providing advisory concerns and routing suggestions without receiving builder transcripts or screenshots. It cannot certify customer comprehension, unseen UX task states, CTA side effects, visual aesthetics or release readiness.
+
+The feature-branch synthetic Playwright fixture and regression checks are evidence of implementation behavior, not a real approved PEF→ABA production run. The PR still requires general ABA CI, PCM/issue and owner review before acceptance.
+
 ## ABA integration status — separate repo, review pending
 
 A draft, opt-in adapter is proposed for the dedicated App Builder Automation repository in **its issue #60 and draft PR #61**. It validates PEF input/manifest/source approvals before work, runs a plan-only phase, saves a plan/blueprint digest, requires a recorded human approval of the exact plan, and only then resumes the same workspace for implementation. The normal unattended ABA path remains available for non-PEF work; compiled PEF input is rejected on that legacy path.
