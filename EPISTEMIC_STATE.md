@@ -191,6 +191,20 @@
 
 ---
 
+## ACS market-facing page B — framing started, not generated (2026-10-08)
+
+**OWNER REQUEST:** The next target is the **market-facing ACS website**, Version B, not rewriting ACS's coordination runtime or the integrated installer. Preserve the current https://acs.design-bakery.com/ as separate Baseline A.
+
+**OBSERVED PRODUCT SOURCE:** The ACS repo at pinned SHA [264117398e7754d7e91076481cd664b5e197c1d4](https://github.com/Pukujan/agent-custom-setup/tree/264117398e7754d7e91076481cd664b5e197c1d4) distinguishes ACS coordination ownership from the integrated hotload installation (PCM, OIO, CGM and ACS runtime). ACS does not own its sibling components, make decisions on behalf of agents, or guarantee every repo installs without prerequisites. A real setup may be PARTIAL.
+
+**PROPOSED CREATIVE DIRECTION:** [Version B market-page brief](plans/ACS_VERSION_B_MARKET_PAGE_FRAME.md) presents an audience hypothesis (independent long-project builder) and alternate team-lead option, three market angles, draft headline “Build with agents. Stop managing every handoff”, seven buyer-belief scenes, task/service design and read-only CTA options. All are PROPOSED, **not approved copy** or measured audience results. The [B run](examples/acs-version-b.run.json) has no accepted gates and the [owner questions](examples/acs-version-b.questions.json) are open.
+
+**BASELINE LIMIT:** The live A site could not be fetched by the available external web tool; no screenshot, live copy capture, media audit or DOM comparison has been verified. The current A is an owner-favored directional positive example, not the canonical gold standard.
+
+**NEXT GATE:** Owner selects the lead audience/position and safe primary CTA, or corrects the agent's hypothesis. Then create the approved Experience Brief, review ABA's blueprint separately, generate B in a separate workspace, and evaluate both fixed versions. The ABA gate/post-build QA is a **draft PR, not production merged**. No website build, deployment, or Baseline A mutation occurred as part of this framing.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
