@@ -89,7 +89,7 @@
   ],
   "service_touchpoints": [],
   "creative": {
-    "headline": "Build with agents. Stop managing every handoff.",
+    "headline": "A shared way of working for AI agents in your repository.",
     "outline": [
       "First screen: immediately name ACS and the repository-installed product category, the individual builder, the qualitative attention-to-work benefit, and a representative product-context visual",
       "Relatable human situation: repeated agent handoffs and reorientation take attention from the real project",
@@ -161,6 +161,6 @@
   },
   "review": {
     "status": "draft",
-    "notes": "Owner accepted Q1 (individual builder, D3) and Q2 benefit direction (return attention to real project work, D6); refs CMF issue #1 and its latest comment. Q3 was specifically marked NEEDS CORRECTION, not answered. Positioning D4/headline, CTA D5, all scenes, S3/S4/S5 creative gates, ABA generation and deployment remain unapproved. Scene 7 and CTA/tasks/services must be revisited after explicit Q3 response. Owner additionally clarified the homepage's primary purpose as a short, relatable product introduction (D7); proposed product-first section order remains unapproved design guidance. Product category and intended benefit must be visible immediately."
+    "notes": "Owner accepted Q1 (individual builder, D3) and Q2 benefit direction (return attention to real project work, D6); refs CMF issue #1 and its latest comment. Q3 was specifically marked NEEDS CORRECTION, not answered. Positioning D4/headline, CTA D5, all scenes, S3/S4/S5 creative gates, ABA generation and deployment remain unapproved. Scene 7 and CTA/tasks/services must be revisited after explicit Q3 response. Owner additionally clarified the homepage's primary purpose as a short, relatable product introduction (D7); proposed product-first section order remains unapproved design guidance. Product category and intended benefit must be visible immediately. A non-production visual study in ABA PR #64 illustrates this candidate headline and page hierarchy. Its render/screenshot checks do not replace the PEF→ABA builder gate or approval. No approved primary CTA in the study."
   }
 }
