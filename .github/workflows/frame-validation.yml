@@ -70,9 +70,9 @@ jobs:
           python - <<'PY'
           import json
           q = json.load(open('/tmp/pef-owner-review.json'))
-          assert q['blocking_total'] == 2
-          assert [x['id'] for x in q['questions']] == ['Q3','Q2']
-          print('Audience decision persists; exactly two substantive QA items remain')
+          assert q['blocking_total'] == 1
+          assert [x['id'] for x in q['questions']] == ['Q3']
+          print('Audience and benefit direction accepted; only unresolved Q3 CTA remains')
           PY
           python - <<'PY'
           import subprocess
