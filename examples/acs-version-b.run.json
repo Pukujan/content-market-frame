@@ -4,7 +4,7 @@
   "project": {
     "id": "acs-site-b",
     "repo": "https://github.com/Pukujan/agent-custom-setup",
-    "source_ref": "UNPINNED: main; freeze source SHA before production",
+    "source_ref": "264117398e7754d7e91076481cd664b5e197c1d4",
     "visibility": "public",
     "product_subject": "Integrated Agent Custom Setup installation (ACS + PCM + OIO + CGM)"
   },
@@ -12,8 +12,8 @@
   "active_stage": "S0_intake",
   "gates": {
     "S0_intake": {
-      "status": "draft",
-      "reason": "Not yet reviewed for Version B"
+      "status": "review",
+      "reason": "Pinned target repo and current task clarified; owner has not yet accepted B market brief"
     },
     "S1_truth": {
       "status": "draft",
@@ -46,9 +46,9 @@
       "statement": "ACS project contract assigns execution coordination to ACS, continuity to PCM, issue recording to OIO, and writing/visual direction to CGM.",
       "status": "observed",
       "source_refs": [
-        "https://github.com/Pukujan/agent-custom-setup/blob/main/PROJECT.md"
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/PROJECT.md"
       ],
-      "source_revision": "main; freeze commit for B",
+      "source_revision": "264117398e7754d7e91076481cd664b5e197c1d4",
       "visibility": "public",
       "boundary": "Component ownership is not equivalent to validated adopter outcome.",
       "evidence_domain": "product_mechanism"
@@ -58,10 +58,10 @@
       "statement": "Current public hotload spec describes full PCM, CGM, OIO and ACS runtime with PARTIAL on incomplete required installation.",
       "status": "observed",
       "source_refs": [
-        "https://github.com/Pukujan/agent-custom-setup/blob/main/modules/coordination/multi-agent-hotload/v0.1.0/HOTLOAD.md",
-        "https://github.com/Pukujan/agent-custom-setup/blob/main/modules/coordination/multi-agent-hotload/v0.1.0/SPEC.md"
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/modules/coordination/multi-agent-hotload/v0.1.0/HOTLOAD.md",
+        "https://github.com/Pukujan/agent-custom-setup/blob/264117398e7754d7e91076481cd664b5e197c1d4/modules/coordination/multi-agent-hotload/v0.1.0/SPEC.md"
       ],
-      "source_revision": "main; freeze before B",
+      "source_revision": "264117398e7754d7e91076481cd664b5e197c1d4",
       "visibility": "public",
       "boundary": "Requires actual source check and safe run on a target before claiming a supported installation outcome.",
       "evidence_domain": "product_mechanism"
@@ -87,6 +87,17 @@
       "visibility": "sanitized",
       "boundary": "Working direction in current conversation, not approval to generate/deploy Version B.",
       "evidence_domain": "owner_direction"
+    },
+    {
+      "id": "F5",
+      "statement": "Owner has identified the next output as an ACS market-facing Version B website, separate from current Baseline A.",
+      "status": "owner_direction",
+      "source_refs": [
+        "plans/ACS_VERSION_B_MARKET_PAGE_FRAME.md"
+      ],
+      "visibility": "sanitized",
+      "evidence_domain": "owner_direction",
+      "boundary": "Authorizes framing work, not implicit story approval, ABA code generation or deployment."
     }
   ],
   "decisions": [
@@ -111,6 +122,30 @@
         "F3",
         "F4"
       ]
+    },
+    {
+      "id": "D3",
+      "kind": "audience",
+      "status": "proposed",
+      "statement": "Lead Version B with the individual long-project builder burdened by agent handoffs, ownership and reorientation; keep engineering team lead as a secondary candidate.",
+      "reason": "Directly human-recognizable and spans installed ACS/PCM/OIO/CGM rather than one mechanism.",
+      "fact_ids": [
+        "F1",
+        "F3",
+        "F5"
+      ]
+    },
+    {
+      "id": "D4",
+      "kind": "positioning",
+      "status": "proposed",
+      "statement": "Working B concept: Build with agents. Stop managing every handoff. Describe integrated repo-level working rules with explicit limitations and no ROI/time-saving statistics.",
+      "reason": "Proposed differentiation from process-audit storytelling; not selected or independently tested.",
+      "fact_ids": [
+        "F1",
+        "F2",
+        "F5"
+      ]
     }
   ],
   "rejections": [
@@ -127,29 +162,36 @@
   "scenes": [],
   "claims": [],
   "handoff": {
-    "summary": "No Version B generation is authorized. First stabilize and exercise the router's structural rules, capture Version A as a fixed reference, and compare competing B market angles on paper before locking a B storyboard.",
+    "summary": "Pinned ACS source supports market-facing Version B framing, but no story, CTA or production work is approved. Proposed human-first B concept and seven belief scenes are in plans/ACS_VERSION_B_MARKET_PAGE_FRAME.md. Baseline A site capture was unavailable to the reviewer; retain unchanged. Resolve lead audience/position and primary CTA with the owner before creative lock or ABA.",
     "fact_ids": [
       "F1",
       "F2",
       "F3",
-      "F4"
+      "F5"
     ],
     "decision_ids": [
       "D1",
-      "D2"
+      "D2",
+      "D3",
+      "D4"
     ],
     "open_questions": [
-      "Who is the first buyer/user scenario we will prioritize for B?",
-      "What current live A capture is available, and can its visible assets and behavior be frozen?",
-      "Which parts of A will be protected as accepted direction vs opened to revision?"
+      "Does B lead with individual long-project builder / handoff burden, or a team operator's shared coordination?",
+      "Will the primary CTA be a truthful read-only walkthrough or a source-linked setup guide?",
+      "Can we freeze a reliable screenshot/copy/behavior capture of Baseline A before comparison?"
     ],
-    "next_action": "Review router contract and A-to-B plan; no site build or deployment."
+    "next_action": "Owner reviews concise B framing alternatives and CTA behavior; then author approved Experience Brief before isolated ABA build."
   },
   "history": [
     {
       "at": "2026-10-08",
       "action": "draft_created",
       "detail": "Version B framing record initialized as draft; no approval or experiment has occurred."
+    },
+    {
+      "at": "2026-10-08",
+      "action": "source_pinned_and_b_story_proposed",
+      "detail": "Pinned ACS main SHA; added human-first B market-page candidate and distinct owner decisions. No gate accepted, no site generation or deployment."
     }
   ],
   "comparison": {
