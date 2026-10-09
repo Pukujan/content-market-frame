@@ -243,6 +243,22 @@
 
 ---
 
+## ACS B: builder ownership correction and real ABA preflight — 2026-10-08
+
+**OWNER DIRECTION / CORRECTION:** A manually authored standalone HTML visual study was **not** the requested application-building automation result. The owner explicitly reiterated “go” for **ABA running real Dyad design machinery**, not a separate HTML builder.
+
+**CORRECTIVE REPOSITORY ACTION:** Manual static [ABA PR #64](https://github.com/Pukujan/app-builder-automation/pull/64) is **closed without merge**; branch remains historical reference only. [ABA issue #65](https://github.com/Pukujan/app-builder-automation/issues/65) now owns actual ACS B generation, with parent #50, dependencies #20 (full Dyad), #60/#61 (PEF blueprint approval) and #62 (rendered QA).
+
+**IMPLEMENTED AS PREPARATION, NOT A SITE:** [Draft stacked ABA PR #66](https://github.com/Pukujan/app-builder-automation/pull/66), based on PEF feature PR #61, contains a pinned, bounded full-Dyad ACS B generation task, a no-side-effect preflight, and 7 test cases. [CI run](https://github.com/Pukujan/app-builder-automation/actions/runs/37873651015) passed: executable inventory **56 declared tool contracts / 14 supported advertised bodies**. Preflight correctly blocks the full design request because `generate_image`, verified real theme use and rendered repair aren't available through the supported path. CI success attests the guard—not an ABA build.
+
+**RUNTIME LIMITATION:** The available local execution environment lacks an ABA model gateway connection/credentials and direct GitHub network access. GitHub connector allows source control changes and CI inspection, **not** a live authenticated Dyad generation session. No model-run, generated React site, real blueprint, image-generation tool call, live browser QA of a Dyad app, deployment, or ACS runtime change was completed.
+
+**HUMAN GATES:** Q1/D3 individual builder, Q2/D6 attention-to-project-work qualitative benefit and D7 immediate product-introduction objective remain accepted. Q3 real primary CTA behavior **OPEN**. Exact positioning, seven storyboard scenes, S3/S4/S5 creative approvals and blueprint approval remain unaccepted. Never forge approvals to advance the build; nor default to the interim 14-tool runner or the closed HTML PR. No baseline A changes.
+
+**NEXT NARROW TASK:** Implement and verify issue #20's full design execution, then connect authorized ABA model provider and resolve Q3/creative approvals. Run **actual** gated Dyad plan→owner-reviewed exact blueprint→React implementation→rendered independent QA in an isolated workspace. No deploy without separate permission.
+
+---
+
 ## Working decisions — pending explicit owner review
 
 | Decision | Status | Rationale | Revisit when |
