@@ -342,3 +342,12 @@ Every new decision adds a small dated record: **observation â†’ interpretation â
 | 2026-10-08 | Initial forensic synthesis and product-doc reconciliation created in the public lab. | OBSERVED / PROPOSED mix, not approved |
 | 2026-10-08 | Owner assessed live-site direction as a substantial improvement but explicitly not final; baseline is a provisional positive exemplar. Independent live inspection unavailable. | OWNER DIRECTION; page QA UNKNOWN |
 | 2026-10-08 | Owner prioritized router/context preservation before any new ACS-B build. New repo gained machine route, draft run, CLI, tests and future A/B plan; no site regenerated. | OWNER DIRECTION and implemented scaffolding, impact UNKNOWN |
+
+## 2026-10-11 correction: reuse professional PMM methods first
+
+- **OBSERVED:** ChatPRD supports PRD and GTM briefs, while established PMM methods (notably April Dunford's positioning and sales-pitch framework) directly cover the market framing and sales-story problem.
+- **OBSERVED:** Public agent-skill projects already provide product-marketing context, customer research, positioning/messaging, sales narratives, demo storyline and PMM reviewer stages. See [existing methods and skills](EXISTING_METHODS_AND_SKILLS.md).
+- **REVISED HYPOTHESIS:** The previous ten-scene storyboard and multi-agent router are not novel best practices; they are provisional local artifacts that should be benchmarked against existing methods. A distinct custom PMM engine is *not* justified yet.
+- **PROPOSED:** Use an established PMM skill suite as the backbone; keep this repository as a thin source-truth adapter, decision record and regression test harness for the specific failure classes seen in ACS.
+- **UNKNOWN:** Which candidate skill stack most reliably recovers the correct human problem with the fewest owner interventions. None has been installed or tested in the current lab.
+- **Next experiment:** Head-to-head ACS framing from identical facts: B2B PMM suite vs Marketing Skills plus positioning method vs current custom workflow. Independent buyer comprehension, source fidelity and correction counts decide; not model self-rating.
